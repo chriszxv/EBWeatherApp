@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,6 +17,12 @@
 		15FF7892237BC5E80003D82E /* EBURLConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FF7891237BC5E80003D82E /* EBURLConstants.swift */; };
 		15FF789A237BD1B30003D82E /* EBWeather.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15FF7899237BD1B30003D82E /* EBWeather.storyboard */; };
 		15FF789C237BD1BC0003D82E /* EBSetting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15FF789B237BD1BC0003D82E /* EBSetting.storyboard */; };
+		15FF789F237BEFAF0003D82E /* EBWeatherListNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FF789E237BEFAF0003D82E /* EBWeatherListNavigator.swift */; };
+		15FF78A1237BEFB80003D82E /* EBWeatherListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FF78A0237BEFB80003D82E /* EBWeatherListViewModel.swift */; };
+		15FF78A3237BEFC10003D82E /* EBWeatherListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FF78A2237BEFC10003D82E /* EBWeatherListViewController.swift */; };
+		15FF7933237BF3730003D82E /* EBPreferenceConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FF7932237BF3730003D82E /* EBPreferenceConstants.swift */; };
+		15FF7935237BF44E0003D82E /* EBErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FF7934237BF44E0003D82E /* EBErrors.swift */; };
+		15FF7939237BFC700003D82E /* EBRequestConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FF7938237BFC700003D82E /* EBRequestConstants.swift */; };
 		47451E23BB75BE51A7B40594 /* Pods_EBWeatherAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B187B6B0CF2871885851E02 /* Pods_EBWeatherAppUITests.framework */; };
 		5675A8AF241D4817652089AB /* Pods_EBWeatherApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8C79CD1B851CF5731871E5C /* Pods_EBWeatherApp.framework */; };
 		57EE61042073359327201AA5 /* Pods_EBWeatherAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3470DA3E43B4747446974BD2 /* Pods_EBWeatherAppTests.framework */; };
@@ -56,6 +62,12 @@
 		15FF7891237BC5E80003D82E /* EBURLConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EBURLConstants.swift; sourceTree = "<group>"; };
 		15FF7899237BD1B30003D82E /* EBWeather.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EBWeather.storyboard; sourceTree = "<group>"; };
 		15FF789B237BD1BC0003D82E /* EBSetting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EBSetting.storyboard; sourceTree = "<group>"; };
+		15FF789E237BEFAF0003D82E /* EBWeatherListNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EBWeatherListNavigator.swift; sourceTree = "<group>"; };
+		15FF78A0237BEFB80003D82E /* EBWeatherListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EBWeatherListViewModel.swift; sourceTree = "<group>"; };
+		15FF78A2237BEFC10003D82E /* EBWeatherListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EBWeatherListViewController.swift; sourceTree = "<group>"; };
+		15FF7932237BF3730003D82E /* EBPreferenceConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EBPreferenceConstants.swift; sourceTree = "<group>"; };
+		15FF7934237BF44E0003D82E /* EBErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EBErrors.swift; sourceTree = "<group>"; };
+		15FF7938237BFC700003D82E /* EBRequestConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EBRequestConstants.swift; sourceTree = "<group>"; };
 		16AAD3C227D1EB8CAF9D53F4 /* Pods-EBWeatherAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EBWeatherAppTests.release.xcconfig"; path = "Target Support Files/Pods-EBWeatherAppTests/Pods-EBWeatherAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		1B187B6B0CF2871885851E02 /* Pods_EBWeatherAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EBWeatherAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3470DA3E43B4747446974BD2 /* Pods_EBWeatherAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EBWeatherAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -105,7 +117,6 @@
 				CE2972743C5CDA81A4538015 /* Pods-EBWeatherAppUITests.debug.xcconfig */,
 				97D3EF0429306C8EC705F39F /* Pods-EBWeatherAppUITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -134,6 +145,7 @@
 		15FF7857237BB8660003D82E /* EBWeatherApp */ = {
 			isa = PBXGroup;
 			children = (
+				15FF7931237BF1750003D82E /* Resources */,
 				15FF7889237BC3360003D82E /* Classes */,
 				15FF785E237BB8660003D82E /* Main.storyboard */,
 				15FF7861237BB8670003D82E /* Assets.xcassets */,
@@ -164,22 +176,12 @@
 		15FF7889237BC3360003D82E /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				15FF788E237BC5700003D82E /* Configs */,
-				15FF788D237BC5650003D82E /* Networks */,
-				15FF788C237BC55C0003D82E /* Models */,
-				15FF788B237BC54A0003D82E /* Scenes */,
-				15FF788A237BC5440003D82E /* Extensions */,
 				15FF7858237BB8660003D82E /* AppDelegate.swift */,
+				15FF788E237BC5700003D82E /* Configs */,
+				15FF788B237BC54A0003D82E /* Scenes */,
 				15FF785C237BB8660003D82E /* ViewController.swift */,
 			);
 			path = Classes;
-			sourceTree = "<group>";
-		};
-		15FF788A237BC5440003D82E /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 		15FF788B237BC54A0003D82E /* Scenes */ = {
@@ -191,24 +193,13 @@
 			path = Scenes;
 			sourceTree = "<group>";
 		};
-		15FF788C237BC55C0003D82E /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		15FF788D237BC5650003D82E /* Networks */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Networks;
-			sourceTree = "<group>";
-		};
 		15FF788E237BC5700003D82E /* Configs */ = {
 			isa = PBXGroup;
 			children = (
 				15FF7891237BC5E80003D82E /* EBURLConstants.swift */,
+				15FF7938237BFC700003D82E /* EBRequestConstants.swift */,
+				15FF7932237BF3730003D82E /* EBPreferenceConstants.swift */,
+				15FF7934237BF44E0003D82E /* EBErrors.swift */,
 			);
 			path = Configs;
 			sourceTree = "<group>";
@@ -236,6 +227,9 @@
 		15FF7895237BD18D0003D82E /* List */ = {
 			isa = PBXGroup;
 			children = (
+				15FF789E237BEFAF0003D82E /* EBWeatherListNavigator.swift */,
+				15FF78A0237BEFB80003D82E /* EBWeatherListViewModel.swift */,
+				15FF78A2237BEFC10003D82E /* EBWeatherListViewController.swift */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -259,6 +253,13 @@
 			children = (
 			);
 			path = Root;
+			sourceTree = "<group>";
+		};
+		15FF7931237BF1750003D82E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		8AE162A75EA58518D2D77910 /* Frameworks */ = {
@@ -495,7 +496,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				15FF785D237BB8660003D82E /* ViewController.swift in Sources */,
+				15FF789F237BEFAF0003D82E /* EBWeatherListNavigator.swift in Sources */,
+				15FF78A3237BEFC10003D82E /* EBWeatherListViewController.swift in Sources */,
+				15FF78A1237BEFB80003D82E /* EBWeatherListViewModel.swift in Sources */,
 				15FF7892237BC5E80003D82E /* EBURLConstants.swift in Sources */,
+				15FF7935237BF44E0003D82E /* EBErrors.swift in Sources */,
+				15FF7933237BF3730003D82E /* EBPreferenceConstants.swift in Sources */,
+				15FF7939237BFC700003D82E /* EBRequestConstants.swift in Sources */,
 				15FF7859237BB8660003D82E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
