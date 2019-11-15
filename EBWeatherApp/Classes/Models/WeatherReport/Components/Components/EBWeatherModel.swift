@@ -11,6 +11,9 @@ struct EBWeatherModel {
     let value: String
     let description: String
     let iconID: String
+    var dayKey: String {
+        return String(iconID.suffix(1))
+    }
 
     init(weatherID: String = "",
          value: String = "",
@@ -62,7 +65,6 @@ extension EBWeatherModel: Codable {
         } else {
             weatherID = ""
         }
-
         do {
             value = try container.decode(.value)
         } catch {
@@ -77,6 +79,23 @@ extension EBWeatherModel: Codable {
             iconID = try container.decode(.iconID)
         } catch {
             iconID = ""
+        }
+    }
+
+    func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+
+        if !weatherID.isEmpty {
+            try container.encode(weatherID, forKey: .weatherID)
+        }
+        if !value.isEmpty {
+            try container.encode(value, forKey: .value)
+        }
+        if !description.isEmpty {
+            try container.encode(description, forKey: .description)
+        }
+        if !iconID.isEmpty {
+            try container.encode(iconID, forKey: .iconID)
         }
     }
 }

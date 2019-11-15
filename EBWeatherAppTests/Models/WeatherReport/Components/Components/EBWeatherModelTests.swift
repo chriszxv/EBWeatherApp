@@ -37,6 +37,7 @@ class EBWeatherModelTests: XCTestCase {
         XCTAssertEqual(object.value, "Clouds")
         XCTAssertEqual(object.description, "晴，少雲")
         XCTAssertEqual(object.iconID, "02n")
+        XCTAssertEqual(object.dayKey, "n")
         XCTAssertEqual(object.isValid, true)
 
         let data = try! JSONEncoder().encode(object)
@@ -64,13 +65,14 @@ class EBWeatherModelTests: XCTestCase {
         XCTAssertEqual(object.weatherID, "801")
         XCTAssertEqual(object.value, "Clouds")
         XCTAssertEqual(object.iconID, "02n")
+        XCTAssertEqual(object.dayKey, "n")
         XCTAssertEqual(object.isValid, false)
 
         let data = try! JSONEncoder().encode(object)
         let string = String(data: data, encoding: .utf8)!
         let encodedString =
             """
-            {"id":"801","main":"Clouds","icon":"02n","description":""}
+            {"id":"801","main":"Clouds","icon":"02n"}
             """
 
         XCTAssertEqual(string, encodedString)
@@ -88,13 +90,14 @@ class EBWeatherModelTests: XCTestCase {
         XCTAssertEqual(object.value, "")
         XCTAssertEqual(object.description, "")
         XCTAssertEqual(object.iconID, "")
+        XCTAssertEqual(object.dayKey, "")
         XCTAssertEqual(object.isValid, false)
 
         let data = try! JSONEncoder().encode(object)
         let string = String(data: data, encoding: .utf8)!
         let encodedString =
             """
-            {"id":"","main":"","icon":"","description":""}
+            {}
             """
 
         XCTAssertEqual(string, encodedString)
