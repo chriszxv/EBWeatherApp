@@ -8,7 +8,7 @@
 
 struct EBPreferenceConstants {
     struct UserDefaultsKey {
-        static let LocationSearchHistory = "EBLocationSearchHistory"
+        static let CityWeatherReportList = "EBCityWeatherReportList"
     }
 
     struct Maximum {
@@ -16,6 +16,6 @@ struct EBPreferenceConstants {
     }
 
     struct DefaultValue {
-        static let ExampleLocation = "HongKong"
+        static let ExampleLocation = "Hong Kong"
     }
 }

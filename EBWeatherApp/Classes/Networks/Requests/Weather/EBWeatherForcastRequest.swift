@@ -20,8 +20,8 @@ final class EBWeatherForcastRequest: EBBaseRequest {
     let parameters: [String: String]
 
     init(applicationID: String = EBRequestConstants.Key.ApplicationID,
-         temperatureFormat: EBRequestTemperatureFormat = .Celsius,
-         language: EBRequestLanguage = .English,
+         temperatureFormat: EBRequestTemperatureFormat = .celsius,
+         language: EBRequestLanguage = .english,
          cityID: String,
          intervalCount: UInt = EBRequestConstants.Value.DefaultIntervalCount) {
         var parameters: [String: String] = [:]

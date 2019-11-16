@@ -28,24 +28,24 @@ struct EBRequestConstants {
 }
 
 enum EBRequestLanguage: String {
-    case English = "en"
-    case ChineseTraditional = "zh_tw"
-    case ChineseSimplified = "zh_cn"
+    case english = "en"
+    case chineseTraditional = "zh_tw"
+    case chineseSimplified = "zh_cn"
     init(_ languageCode: String = "") {
         switch languageCode {
         case "en":
-            self = .English
+            self = .english
         case "tc":
-            self = .ChineseTraditional
+            self = .chineseTraditional
         case "sc":
-            self = .ChineseSimplified
+            self = .chineseSimplified
         default:
-            self = .English
+            self = .english
         }
     }
 }
 
 enum EBRequestTemperatureFormat: String {
-    case Celsius = "imperial"
-    case Fahrenheit = "metric"
+    case celsius = "imperial"
+    case fahrenheit = "metric"
 }

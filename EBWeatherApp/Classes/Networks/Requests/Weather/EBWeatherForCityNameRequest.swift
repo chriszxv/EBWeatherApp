@@ -19,8 +19,8 @@ final class EBWeatherForCityNameRequest: EBBaseRequest {
     let parameters: [String: String]
 
     init(applicationID: String = EBRequestConstants.Key.ApplicationID,
-         temperatureFormat: EBRequestTemperatureFormat = .Celsius,
-         language: EBRequestLanguage = .English,
+         temperatureFormat: EBRequestTemperatureFormat = .celsius,
+         language: EBRequestLanguage = .english,
          cityName: String) {
         var parameters: [String: String] = [:]
 

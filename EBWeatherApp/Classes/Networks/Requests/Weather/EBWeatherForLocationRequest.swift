@@ -21,8 +21,8 @@ final class EBWeatherForLocationRequest: EBBaseRequest {
     let parameters: [String: String]
 
     init(applicationID: String = EBRequestConstants.Key.ApplicationID,
-         temperatureFormat: EBRequestTemperatureFormat = .Celsius,
-         language: EBRequestLanguage = .English,
+         temperatureFormat: EBRequestTemperatureFormat = .celsius,
+         language: EBRequestLanguage = .english,
          latitude: Double,
          longitude: Double,
          locationSearchCount: UInt = EBRequestConstants.Value.DefaultLocationSearchCount) {
