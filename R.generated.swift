@@ -1087,8 +1087,8 @@ struct _R: Rswift.Validatable {
       }
 
       static func validate() throws {
-        if UIKit.UIImage(named: "image/icon/weather/cloud-dash", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'image/icon/weather/cloud-dash' is used in nib 'EBWeatherListItemCell', but couldn't be loaded.") }
-        if UIKit.UIImage(named: "image/icon/weather/cloud-dash-filled", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'image/icon/weather/cloud-dash-filled' is used in nib 'EBWeatherListItemCell', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "icon/weather/cloud_dash", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon/weather/cloud_dash' is used in nib 'EBWeatherListItemCell', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "icon/weather/cloud_dash_filled", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon/weather/cloud_dash_filled' is used in nib 'EBWeatherListItemCell', but couldn't be loaded.") }
         if #available(iOS 11.0, tvOS 11.0, *) {
         }
       }
@@ -1127,8 +1127,8 @@ struct _R: Rswift.Validatable {
       }
 
       static func validate() throws {
-        if UIKit.UIImage(named: "image/icon/general/cross", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'image/icon/general/cross' is used in storyboard 'EBSetting', but couldn't be loaded.") }
-        if UIKit.UIImage(named: "image/icon/general/cross-filled", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'image/icon/general/cross-filled' is used in storyboard 'EBSetting', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "icon/general/cross", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon/general/cross' is used in storyboard 'EBSetting', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "icon/general/cross_filled", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon/general/cross_filled' is used in storyboard 'EBSetting', but couldn't be loaded.") }
         if #available(iOS 11.0, tvOS 11.0, *) {
           if UIKit.UIColor(named: "color/background/background", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'color/background/background' is used in storyboard 'EBSetting', but couldn't be loaded.") }
           if UIKit.UIColor(named: "color/background/primary", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'color/background/primary' is used in storyboard 'EBSetting', but couldn't be loaded.") }
@@ -1154,7 +1154,7 @@ struct _R: Rswift.Validatable {
       }
 
       static func validate() throws {
-        if UIKit.UIImage(named: "image/icon/general/gear", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'image/icon/general/gear' is used in storyboard 'EBWeather', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "icon/general/gear", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon/general/gear' is used in storyboard 'EBWeather', but couldn't be loaded.") }
         if #available(iOS 11.0, tvOS 11.0, *) {
         }
         if _R.storyboard.ebWeather().ebWeatherListViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'ebWeatherListViewController' could not be loaded from storyboard 'EBWeather' as 'EBWeatherListViewController'.") }

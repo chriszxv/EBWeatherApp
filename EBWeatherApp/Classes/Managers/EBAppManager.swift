@@ -62,6 +62,11 @@ final class EBAppManager {
 
 extension EBAppManager {
     func configureMainInterface() -> UIViewController {
-        return UIViewController()
+        let viewController = EBSettingRootViewController.instantiateFromStoryboard()
+        let navigator = EBSettingRootNavigator(viewController: viewController)
+        let viewModel = EBSettingRootViewModel(navigator: navigator)
+        viewController.viewModel = viewModel
+        viewController.modalPresentationStyle = .fullScreen
+        return viewController
     }
 }
