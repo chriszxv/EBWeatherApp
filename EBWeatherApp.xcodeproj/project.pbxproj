@@ -60,6 +60,8 @@
 		154E02A0237DA6D30059E38D /* EBCoordinateModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154E029F237DA6D30059E38D /* EBCoordinateModelTests.swift */; };
 		154E02A5237E86A70059E38D /* EBWeatherImageMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154E02A4237E86A70059E38D /* EBWeatherImageMapper.swift */; };
 		154E02AA237E99A20059E38D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154E02A9237E99A20059E38D /* AppDelegate.swift */; };
+		154E02FE237EF7460059E38D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 154E0300237EF7460059E38D /* Localizable.strings */; };
+		154E0315238009F30059E38D /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154E0314238009F30059E38D /* R.generated.swift */; };
 		15FF7862237BB8670003D82E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15FF7861237BB8670003D82E /* Assets.xcassets */; };
 		15FF7865237BB8670003D82E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15FF7863237BB8670003D82E /* LaunchScreen.storyboard */; };
 		15FF7870237BB8670003D82E /* EBWeatherAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FF786F237BB8670003D82E /* EBWeatherAppTests.swift */; };
@@ -149,6 +151,12 @@
 		154E029F237DA6D30059E38D /* EBCoordinateModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EBCoordinateModelTests.swift; sourceTree = "<group>"; };
 		154E02A4237E86A70059E38D /* EBWeatherImageMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EBWeatherImageMapper.swift; sourceTree = "<group>"; };
 		154E02A9237E99A20059E38D /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		154E02F9237EC8AC0059E38D /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		154E02FB237EC8B70059E38D /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		154E02FF237EF7460059E38D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		154E0301237EF7490059E38D /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		154E0302237EF74A0059E38D /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		154E0314238009F30059E38D /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		15FF7855237BB8660003D82E /* EBWeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EBWeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15FF7861237BB8670003D82E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		15FF7864237BB8670003D82E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -432,6 +440,8 @@
 				15FF7861237BB8670003D82E /* Assets.xcassets */,
 				15FF7863237BB8670003D82E /* LaunchScreen.storyboard */,
 				15FF7866237BB8670003D82E /* Info.plist */,
+				154E0300237EF7460059E38D /* Localizable.strings */,
+				154E0314238009F30059E38D /* R.generated.swift */,
 			);
 			path = EBWeatherApp;
 			sourceTree = "<group>";
@@ -558,6 +568,7 @@
 			buildConfigurationList = 15FF787F237BB8670003D82E /* Build configuration list for PBXNativeTarget "EBWeatherApp" */;
 			buildPhases = (
 				BAED0B04B09750564E559B69 /* [CP] Check Pods Manifest.lock */,
+				154E0306237EF9CB0059E38D /* R.swift */,
 				15FF7851237BB8660003D82E /* Sources */,
 				15FF7852237BB8660003D82E /* Frameworks */,
 				15FF7853237BB8660003D82E /* Resources */,
@@ -640,6 +651,8 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
+				"zh-Hant",
 			);
 			mainGroup = 15FF784C237BB8660003D82E;
 			productRefGroup = 15FF7856237BB8660003D82E /* Products */;
@@ -659,6 +672,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				15FF7865237BB8670003D82E /* LaunchScreen.storyboard in Resources */,
+				154E02FE237EF7460059E38D /* Localizable.strings in Resources */,
 				15FF789C237BD1BC0003D82E /* EBSetting.storyboard in Resources */,
 				15FF7862237BB8670003D82E /* Assets.xcassets in Resources */,
 				15FF789A237BD1B30003D82E /* EBWeather.storyboard in Resources */,
@@ -682,6 +696,26 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		154E0306237EF9CB0059E38D /* R.swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			name = R.swift;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
+		};
 		37E809FCE55B76A36B9C3EBD /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -824,6 +858,7 @@
 				154E0280237D9B7A0059E38D /* UIScrollView+AA.swift in Sources */,
 				154E0236237C72F30059E38D /* EBWeatherForLocationRequest.swift in Sources */,
 				154E0247237C75520059E38D /* EBWindModel.swift in Sources */,
+				154E0315238009F30059E38D /* R.generated.swift in Sources */,
 				154E0234237C72F30059E38D /* EBJsonClient.swift in Sources */,
 				15FF7939237BFC700003D82E /* EBRequestConstants.swift in Sources */,
 			);
@@ -867,15 +902,22 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		154E0300237EF7460059E38D /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
+				154E02FF237EF7460059E38D /* en */,
+				154E0301237EF7490059E38D /* zh-Hans */,
+				154E0302237EF74A0059E38D /* zh-Hant */,
 			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 		15FF7863237BB8670003D82E /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				15FF7864237BB8670003D82E /* Base */,
+				154E02F9237EC8AC0059E38D /* zh-Hans */,
+				154E02FB237EC8B70059E38D /* zh-Hant */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -887,6 +929,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -947,6 +990,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
