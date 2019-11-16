@@ -31,7 +31,6 @@
 		154E0276237D9B7A0059E38D /* UIViewController+AA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154E0253237D9B790059E38D /* UIViewController+AA.swift */; };
 		154E0277237D9B7A0059E38D /* URL+AA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154E0254237D9B790059E38D /* URL+AA.swift */; };
 		154E0278237D9B7A0059E38D /* SVProgressHUD+AA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154E0255237D9B790059E38D /* SVProgressHUD+AA.swift */; };
-		154E0279237D9B7A0059E38D /* DateFormatter+AA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154E0256237D9B790059E38D /* DateFormatter+AA.swift */; };
 		154E027A237D9B7A0059E38D /* Array+AA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154E0257237D9B790059E38D /* Array+AA.swift */; };
 		154E027B237D9B7A0059E38D /* UITextField+AA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154E0258237D9B790059E38D /* UITextField+AA.swift */; };
 		154E027C237D9B7A0059E38D /* UISearchBar+AA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154E0259237D9B790059E38D /* UISearchBar+AA.swift */; };
@@ -61,7 +60,6 @@
 		154E02A0237DA6D30059E38D /* EBCoordinateModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154E029F237DA6D30059E38D /* EBCoordinateModelTests.swift */; };
 		154E02A5237E86A70059E38D /* EBWeatherImageMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154E02A4237E86A70059E38D /* EBWeatherImageMapper.swift */; };
 		154E02AA237E99A20059E38D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154E02A9237E99A20059E38D /* AppDelegate.swift */; };
-		15FF7860237BB8660003D82E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15FF785E237BB8660003D82E /* Main.storyboard */; };
 		15FF7862237BB8670003D82E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15FF7861237BB8670003D82E /* Assets.xcassets */; };
 		15FF7865237BB8670003D82E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15FF7863237BB8670003D82E /* LaunchScreen.storyboard */; };
 		15FF7870237BB8670003D82E /* EBWeatherAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FF786F237BB8670003D82E /* EBWeatherAppTests.swift */; };
@@ -122,7 +120,6 @@
 		154E0253237D9B790059E38D /* UIViewController+AA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+AA.swift"; sourceTree = "<group>"; };
 		154E0254237D9B790059E38D /* URL+AA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URL+AA.swift"; sourceTree = "<group>"; };
 		154E0255237D9B790059E38D /* SVProgressHUD+AA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SVProgressHUD+AA.swift"; sourceTree = "<group>"; };
-		154E0256237D9B790059E38D /* DateFormatter+AA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DateFormatter+AA.swift"; sourceTree = "<group>"; };
 		154E0257237D9B790059E38D /* Array+AA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+AA.swift"; sourceTree = "<group>"; };
 		154E0258237D9B790059E38D /* UITextField+AA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+AA.swift"; sourceTree = "<group>"; };
 		154E0259237D9B790059E38D /* UISearchBar+AA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UISearchBar+AA.swift"; sourceTree = "<group>"; };
@@ -153,7 +150,6 @@
 		154E02A4237E86A70059E38D /* EBWeatherImageMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EBWeatherImageMapper.swift; sourceTree = "<group>"; };
 		154E02A9237E99A20059E38D /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		15FF7855237BB8660003D82E /* EBWeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EBWeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		15FF785F237BB8660003D82E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		15FF7861237BB8670003D82E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		15FF7864237BB8670003D82E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		15FF7866237BB8670003D82E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -310,7 +306,6 @@
 				154E0253237D9B790059E38D /* UIViewController+AA.swift */,
 				154E0254237D9B790059E38D /* URL+AA.swift */,
 				154E0255237D9B790059E38D /* SVProgressHUD+AA.swift */,
-				154E0256237D9B790059E38D /* DateFormatter+AA.swift */,
 				154E0257237D9B790059E38D /* Array+AA.swift */,
 				154E0258237D9B790059E38D /* UITextField+AA.swift */,
 				154E0259237D9B790059E38D /* UISearchBar+AA.swift */,
@@ -433,9 +428,7 @@
 		15FF7857237BB8660003D82E /* EBWeatherApp */ = {
 			isa = PBXGroup;
 			children = (
-				15FF7931237BF1750003D82E /* Resources */,
 				15FF7889237BC3360003D82E /* Classes */,
-				15FF785E237BB8660003D82E /* Main.storyboard */,
 				15FF7861237BB8670003D82E /* Assets.xcassets */,
 				15FF7863237BB8670003D82E /* LaunchScreen.storyboard */,
 				15FF7866237BB8670003D82E /* Info.plist */,
@@ -545,13 +538,6 @@
 			children = (
 			);
 			path = Root;
-			sourceTree = "<group>";
-		};
-		15FF7931237BF1750003D82E /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Resources;
 			sourceTree = "<group>";
 		};
 		8AE162A75EA58518D2D77910 /* Frameworks */ = {
@@ -676,7 +662,6 @@
 				15FF789C237BD1BC0003D82E /* EBSetting.storyboard in Resources */,
 				15FF7862237BB8670003D82E /* Assets.xcassets in Resources */,
 				15FF789A237BD1B30003D82E /* EBWeather.storyboard in Resources */,
-				15FF7860237BB8660003D82E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -825,7 +810,6 @@
 				154E0284237D9B7A0059E38D /* Localize.swift in Sources */,
 				154E0237237C72F30059E38D /* EBWeatherForCityNameRequest.swift in Sources */,
 				15FF7935237BF44E0003D82E /* EBErrors.swift in Sources */,
-				154E0279237D9B7A0059E38D /* DateFormatter+AA.swift in Sources */,
 				154E0285237D9B7A0059E38D /* ViewReusable.swift in Sources */,
 				154E028E237D9B7A0059E38D /* StatusBarSupport.swift in Sources */,
 				154E02A5237E86A70059E38D /* EBWeatherImageMapper.swift in Sources */,
@@ -883,12 +867,9 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		15FF785E237BB8660003D82E /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				15FF785F237BB8660003D82E /* Base */,
 			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 		15FF7863237BB8670003D82E /* LaunchScreen.storyboard */ = {
@@ -952,7 +933,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1006,7 +987,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
