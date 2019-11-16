@@ -1130,9 +1130,9 @@ struct _R: Rswift.Validatable {
         if UIKit.UIImage(named: "icon/general/cross", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon/general/cross' is used in storyboard 'EBSetting', but couldn't be loaded.") }
         if UIKit.UIImage(named: "icon/general/cross_filled", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon/general/cross_filled' is used in storyboard 'EBSetting', but couldn't be loaded.") }
         if #available(iOS 11.0, tvOS 11.0, *) {
-          if UIKit.UIColor(named: "color/background/background", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'color/background/background' is used in storyboard 'EBSetting', but couldn't be loaded.") }
-          if UIKit.UIColor(named: "color/background/primary", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'color/background/primary' is used in storyboard 'EBSetting', but couldn't be loaded.") }
-          if UIKit.UIColor(named: "color/text/on-background", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'color/text/on-background' is used in storyboard 'EBSetting', but couldn't be loaded.") }
+          if UIKit.UIColor(named: "background/background", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'background/background' is used in storyboard 'EBSetting', but couldn't be loaded.") }
+          if UIKit.UIColor(named: "background/primary", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'background/primary' is used in storyboard 'EBSetting', but couldn't be loaded.") }
+          if UIKit.UIColor(named: "text/on_background", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'text/on_background' is used in storyboard 'EBSetting', but couldn't be loaded.") }
         }
         if _R.storyboard.ebSetting().ebSettingRootViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'ebSettingRootViewController' could not be loaded from storyboard 'EBSetting' as 'EBSettingRootViewController'.") }
       }
