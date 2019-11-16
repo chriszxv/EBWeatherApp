@@ -16,11 +16,36 @@ struct EBWeatherReportModel {
     let temperature: EBTemperatureModel
     let wind: EBWindModel
     let weather: [EBWeatherModel]
+
     var displayDate: String {
         if dateTime.isNaN {
             return "yyyy-MM-dd HH:mm:ss"
         } else {
             return Date(timeIntervalSince1970: dateTime).string(dateFormat: "yyyy-MM-dd HH:mm:ss")
+        }
+    }
+
+    var displayDay: String {
+        if dateTime.isNaN {
+            return "yyyy-MM-dd HH:mm:ss"
+        } else {
+            return Date(timeIntervalSince1970: dateTime).string(dateFormat: "EEEE ⎯⎯⎯⎯⎯ MMM d")
+        }
+    }
+
+    var displayTime: String {
+        if dateTime.isNaN {
+            return "HH:mm"
+        } else {
+            return Date(timeIntervalSince1970: dateTime).string(dateFormat: "HH:mm")
+        }
+    }
+
+    var firstWeather: EBWeatherModel {
+        if weather.isEmpty {
+            return EBWeatherModel()
+        } else {
+            return weather[0]
         }
     }
 

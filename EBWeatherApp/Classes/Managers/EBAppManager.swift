@@ -62,9 +62,9 @@ final class EBAppManager {
 
 extension EBAppManager {
     func configureMainInterface() -> UIViewController {
-        let viewController = EBSettingRootViewController.instantiateFromStoryboard()
-        let navigator = EBSettingRootNavigator(viewController: viewController)
-        let viewModel = EBSettingRootViewModel(navigator: navigator)
+        let viewController = EBWeatherListViewController.instantiateFromStoryboard()
+        let navigator = EBWeatherListNavigator(viewController: viewController)
+        let viewModel = EBWeatherListViewModel(navigator: navigator)
         viewController.viewModel = viewModel
         viewController.modalPresentationStyle = .fullScreen
         return viewController
