@@ -6,7 +6,7 @@
 //  Copyright © 2019 Chris So. All rights reserved.
 //
 
-enum AASNAuthorizationStatusError: Error {
+enum EBAuthorizationStatusError: Error {
     case denied
     case restricted
     case notDetermined

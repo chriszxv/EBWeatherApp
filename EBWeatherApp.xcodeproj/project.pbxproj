@@ -60,6 +60,8 @@
 		154E02A0237DA6D30059E38D /* EBCoordinateModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154E029F237DA6D30059E38D /* EBCoordinateModelTests.swift */; };
 		154E02A5237E86A70059E38D /* EBWeatherImageMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154E02A4237E86A70059E38D /* EBWeatherImageMapper.swift */; };
 		154E02AA237E99A20059E38D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154E02A9237E99A20059E38D /* AppDelegate.swift */; };
+		154E02AC237E9BB70059E38D /* EBAppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154E02AB237E9BB70059E38D /* EBAppManager.swift */; };
+		154E02B2237E9D610059E38D /* EBBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154E02B1237E9D610059E38D /* EBBaseViewController.swift */; };
 		154E02D2237E9DD30059E38D /* UIScrollView+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154E02B6237E9DD20059E38D /* UIScrollView+Rx.swift */; };
 		154E02D3237E9DD30059E38D /* UINavigationBar+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154E02B7237E9DD20059E38D /* UINavigationBar+Rx.swift */; };
 		154E02D5237E9DD30059E38D /* ObservableType+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154E02B9237E9DD20059E38D /* ObservableType+Rx.swift */; };
@@ -82,6 +84,7 @@
 		154E02E8237E9DD30059E38D /* UINavigationItem+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154E02CC237E9DD30059E38D /* UINavigationItem+Rx.swift */; };
 		154E02E9237E9DD30059E38D /* RxErrorTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154E02CE237E9DD30059E38D /* RxErrorTracker.swift */; };
 		154E02EB237E9DD30059E38D /* RxStateTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154E02D0237E9DD30059E38D /* RxStateTracker.swift */; };
+		154E02EE237EAE6A0059E38D /* EBNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154E02ED237EAE6A0059E38D /* EBNavigationController.swift */; };
 		154E02FE237EF7460059E38D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 154E0300237EF7460059E38D /* Localizable.strings */; };
 		154E0315238009F30059E38D /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154E0314238009F30059E38D /* R.generated.swift */; };
 		15FF7862237BB8670003D82E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15FF7861237BB8670003D82E /* Assets.xcassets */; };
@@ -173,6 +176,8 @@
 		154E029F237DA6D30059E38D /* EBCoordinateModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EBCoordinateModelTests.swift; sourceTree = "<group>"; };
 		154E02A4237E86A70059E38D /* EBWeatherImageMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EBWeatherImageMapper.swift; sourceTree = "<group>"; };
 		154E02A9237E99A20059E38D /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		154E02AB237E9BB70059E38D /* EBAppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EBAppManager.swift; sourceTree = "<group>"; };
+		154E02B1237E9D610059E38D /* EBBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EBBaseViewController.swift; sourceTree = "<group>"; };
 		154E02B6237E9DD20059E38D /* UIScrollView+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Rx.swift"; sourceTree = "<group>"; };
 		154E02B7237E9DD20059E38D /* UINavigationBar+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+Rx.swift"; sourceTree = "<group>"; };
 		154E02B9237E9DD20059E38D /* ObservableType+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ObservableType+Rx.swift"; sourceTree = "<group>"; };
@@ -195,6 +200,7 @@
 		154E02CC237E9DD30059E38D /* UINavigationItem+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationItem+Rx.swift"; sourceTree = "<group>"; };
 		154E02CE237E9DD30059E38D /* RxErrorTracker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxErrorTracker.swift; sourceTree = "<group>"; };
 		154E02D0237E9DD30059E38D /* RxStateTracker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxStateTracker.swift; sourceTree = "<group>"; };
+		154E02ED237EAE6A0059E38D /* EBNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EBNavigationController.swift; sourceTree = "<group>"; };
 		154E02F9237EC8AC0059E38D /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		154E02FB237EC8B70059E38D /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		154E02FF237EF7460059E38D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -455,6 +461,23 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		154E02A6237E983E0059E38D /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				154E02AB237E9BB70059E38D /* EBAppManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		154E02B0237E9D3D0059E38D /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				154E02B1237E9D610059E38D /* EBBaseViewController.swift */,
+				154E02ED237EAE6A0059E38D /* EBNavigationController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		154E02B3237E9DD20059E38D /* Rx */ = {
 			isa = PBXGroup;
 			children = (
@@ -566,6 +589,8 @@
 				154E0229237C72F30059E38D /* Networks */,
 				154E02B3237E9DD20059E38D /* Rx */,
 				15FF788B237BC54A0003D82E /* Scenes */,
+				154E02B0237E9D3D0059E38D /* ViewControllers */,
+				154E02AF237E9D360059E38D /* Views */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -934,6 +959,7 @@
 				154E0276237D9B7A0059E38D /* UIViewController+AA.swift in Sources */,
 				154E02D7237E9DD30059E38D /* UITabBarItem+Rx.swift in Sources */,
 				154E02E0237E9DD30059E38D /* Localize+Rx.swift in Sources */,
+				154E02B2237E9D610059E38D /* EBBaseViewController.swift in Sources */,
 				154E0275237D9B7A0059E38D /* UICollectionView+AA.swift in Sources */,
 				154E02D9237E9DD30059E38D /* UITabBarController+Rx.swift in Sources */,
 				154E027B237D9B7A0059E38D /* UITextField+AA.swift in Sources */,
@@ -944,6 +970,7 @@
 				154E0274237D9B7A0059E38D /* UIView+AA.swift in Sources */,
 				154E028A237D9B7A0059E38D /* NibProvidable.swift in Sources */,
 				154E02DB237E9DD30059E38D /* UITextField+Rx.swift in Sources */,
+				154E02AC237E9BB70059E38D /* EBAppManager.swift in Sources */,
 				154E0281237D9B7A0059E38D /* Date+AA.swift in Sources */,
 				154E0286237D9B7A0059E38D /* BundleResource.swift in Sources */,
 				154E027C237D9B7A0059E38D /* UISearchBar+AA.swift in Sources */,
@@ -973,6 +1000,7 @@
 				154E0247237C75520059E38D /* EBWindModel.swift in Sources */,
 				154E0315238009F30059E38D /* R.generated.swift in Sources */,
 				154E0234237C72F30059E38D /* EBJsonClient.swift in Sources */,
+				154E02EE237EAE6A0059E38D /* EBNavigationController.swift in Sources */,
 				15FF7939237BFC700003D82E /* EBRequestConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
