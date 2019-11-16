@@ -60,6 +60,28 @@
 		154E02A0237DA6D30059E38D /* EBCoordinateModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154E029F237DA6D30059E38D /* EBCoordinateModelTests.swift */; };
 		154E02A5237E86A70059E38D /* EBWeatherImageMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154E02A4237E86A70059E38D /* EBWeatherImageMapper.swift */; };
 		154E02AA237E99A20059E38D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154E02A9237E99A20059E38D /* AppDelegate.swift */; };
+		154E02D2237E9DD30059E38D /* UIScrollView+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154E02B6237E9DD20059E38D /* UIScrollView+Rx.swift */; };
+		154E02D3237E9DD30059E38D /* UINavigationBar+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154E02B7237E9DD20059E38D /* UINavigationBar+Rx.swift */; };
+		154E02D5237E9DD30059E38D /* ObservableType+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154E02B9237E9DD20059E38D /* ObservableType+Rx.swift */; };
+		154E02D6237E9DD30059E38D /* UIPopoverPresentationController+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154E02BA237E9DD20059E38D /* UIPopoverPresentationController+Rx.swift */; };
+		154E02D7237E9DD30059E38D /* UITabBarItem+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154E02BB237E9DD20059E38D /* UITabBarItem+Rx.swift */; };
+		154E02D8237E9DD30059E38D /* BehaviorRelay+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154E02BC237E9DD20059E38D /* BehaviorRelay+Rx.swift */; };
+		154E02D9237E9DD30059E38D /* UITabBarController+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154E02BD237E9DD20059E38D /* UITabBarController+Rx.swift */; };
+		154E02DA237E9DD30059E38D /* RxAnimated+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154E02BE237E9DD20059E38D /* RxAnimated+Rx.swift */; };
+		154E02DB237E9DD30059E38D /* UITextField+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154E02BF237E9DD20059E38D /* UITextField+Rx.swift */; };
+		154E02DC237E9DD30059E38D /* UISearchBar+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154E02C0237E9DD20059E38D /* UISearchBar+Rx.swift */; };
+		154E02DD237E9DD30059E38D /* SharedSequenceConvertibleType+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154E02C1237E9DD20059E38D /* SharedSequenceConvertibleType+Rx.swift */; };
+		154E02DE237E9DD30059E38D /* UIView+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154E02C2237E9DD30059E38D /* UIView+Rx.swift */; };
+		154E02DF237E9DD30059E38D /* UIButton+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154E02C3237E9DD30059E38D /* UIButton+Rx.swift */; };
+		154E02E0237E9DD30059E38D /* Localize+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154E02C4237E9DD30059E38D /* Localize+Rx.swift */; };
+		154E02E2237E9DD30059E38D /* UIViewController+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154E02C6237E9DD30059E38D /* UIViewController+Rx.swift */; };
+		154E02E3237E9DD30059E38D /* UICollectionView+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154E02C7237E9DD30059E38D /* UICollectionView+Rx.swift */; };
+		154E02E4237E9DD30059E38D /* SVProgressHUD+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154E02C8237E9DD30059E38D /* SVProgressHUD+Rx.swift */; };
+		154E02E5237E9DD30059E38D /* UITableView+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154E02C9237E9DD30059E38D /* UITableView+Rx.swift */; };
+		154E02E7237E9DD30059E38D /* UIControl+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154E02CB237E9DD30059E38D /* UIControl+Rx.swift */; };
+		154E02E8237E9DD30059E38D /* UINavigationItem+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154E02CC237E9DD30059E38D /* UINavigationItem+Rx.swift */; };
+		154E02E9237E9DD30059E38D /* RxErrorTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154E02CE237E9DD30059E38D /* RxErrorTracker.swift */; };
+		154E02EB237E9DD30059E38D /* RxStateTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154E02D0237E9DD30059E38D /* RxStateTracker.swift */; };
 		154E02FE237EF7460059E38D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 154E0300237EF7460059E38D /* Localizable.strings */; };
 		154E0315238009F30059E38D /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154E0314238009F30059E38D /* R.generated.swift */; };
 		15FF7862237BB8670003D82E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15FF7861237BB8670003D82E /* Assets.xcassets */; };
@@ -151,6 +173,28 @@
 		154E029F237DA6D30059E38D /* EBCoordinateModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EBCoordinateModelTests.swift; sourceTree = "<group>"; };
 		154E02A4237E86A70059E38D /* EBWeatherImageMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EBWeatherImageMapper.swift; sourceTree = "<group>"; };
 		154E02A9237E99A20059E38D /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		154E02B6237E9DD20059E38D /* UIScrollView+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Rx.swift"; sourceTree = "<group>"; };
+		154E02B7237E9DD20059E38D /* UINavigationBar+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+Rx.swift"; sourceTree = "<group>"; };
+		154E02B9237E9DD20059E38D /* ObservableType+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ObservableType+Rx.swift"; sourceTree = "<group>"; };
+		154E02BA237E9DD20059E38D /* UIPopoverPresentationController+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIPopoverPresentationController+Rx.swift"; sourceTree = "<group>"; };
+		154E02BB237E9DD20059E38D /* UITabBarItem+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITabBarItem+Rx.swift"; sourceTree = "<group>"; };
+		154E02BC237E9DD20059E38D /* BehaviorRelay+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BehaviorRelay+Rx.swift"; sourceTree = "<group>"; };
+		154E02BD237E9DD20059E38D /* UITabBarController+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITabBarController+Rx.swift"; sourceTree = "<group>"; };
+		154E02BE237E9DD20059E38D /* RxAnimated+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RxAnimated+Rx.swift"; sourceTree = "<group>"; };
+		154E02BF237E9DD20059E38D /* UITextField+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+Rx.swift"; sourceTree = "<group>"; };
+		154E02C0237E9DD20059E38D /* UISearchBar+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UISearchBar+Rx.swift"; sourceTree = "<group>"; };
+		154E02C1237E9DD20059E38D /* SharedSequenceConvertibleType+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SharedSequenceConvertibleType+Rx.swift"; sourceTree = "<group>"; };
+		154E02C2237E9DD30059E38D /* UIView+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Rx.swift"; sourceTree = "<group>"; };
+		154E02C3237E9DD30059E38D /* UIButton+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Rx.swift"; sourceTree = "<group>"; };
+		154E02C4237E9DD30059E38D /* Localize+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Localize+Rx.swift"; sourceTree = "<group>"; };
+		154E02C6237E9DD30059E38D /* UIViewController+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Rx.swift"; sourceTree = "<group>"; };
+		154E02C7237E9DD30059E38D /* UICollectionView+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Rx.swift"; sourceTree = "<group>"; };
+		154E02C8237E9DD30059E38D /* SVProgressHUD+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SVProgressHUD+Rx.swift"; sourceTree = "<group>"; };
+		154E02C9237E9DD30059E38D /* UITableView+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Rx.swift"; sourceTree = "<group>"; };
+		154E02CB237E9DD30059E38D /* UIControl+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIControl+Rx.swift"; sourceTree = "<group>"; };
+		154E02CC237E9DD30059E38D /* UINavigationItem+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationItem+Rx.swift"; sourceTree = "<group>"; };
+		154E02CE237E9DD30059E38D /* RxErrorTracker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxErrorTracker.swift; sourceTree = "<group>"; };
+		154E02D0237E9DD30059E38D /* RxStateTracker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxStateTracker.swift; sourceTree = "<group>"; };
 		154E02F9237EC8AC0059E38D /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		154E02FB237EC8B70059E38D /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		154E02FF237EF7460059E38D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -411,6 +455,51 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		154E02B3237E9DD20059E38D /* Rx */ = {
+			isa = PBXGroup;
+			children = (
+				154E02B4237E9DD20059E38D /* Extensions */,
+				154E02CD237E9DD30059E38D /* Helpers */,
+			);
+			path = Rx;
+			sourceTree = "<group>";
+		};
+		154E02B4237E9DD20059E38D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				154E02BC237E9DD20059E38D /* BehaviorRelay+Rx.swift */,
+				154E02C4237E9DD30059E38D /* Localize+Rx.swift */,
+				154E02B9237E9DD20059E38D /* ObservableType+Rx.swift */,
+				154E02BE237E9DD20059E38D /* RxAnimated+Rx.swift */,
+				154E02C1237E9DD20059E38D /* SharedSequenceConvertibleType+Rx.swift */,
+				154E02C8237E9DD30059E38D /* SVProgressHUD+Rx.swift */,
+				154E02C3237E9DD30059E38D /* UIButton+Rx.swift */,
+				154E02C7237E9DD30059E38D /* UICollectionView+Rx.swift */,
+				154E02CB237E9DD30059E38D /* UIControl+Rx.swift */,
+				154E02B7237E9DD20059E38D /* UINavigationBar+Rx.swift */,
+				154E02CC237E9DD30059E38D /* UINavigationItem+Rx.swift */,
+				154E02BA237E9DD20059E38D /* UIPopoverPresentationController+Rx.swift */,
+				154E02B6237E9DD20059E38D /* UIScrollView+Rx.swift */,
+				154E02C0237E9DD20059E38D /* UISearchBar+Rx.swift */,
+				154E02BD237E9DD20059E38D /* UITabBarController+Rx.swift */,
+				154E02BB237E9DD20059E38D /* UITabBarItem+Rx.swift */,
+				154E02C9237E9DD30059E38D /* UITableView+Rx.swift */,
+				154E02BF237E9DD20059E38D /* UITextField+Rx.swift */,
+				154E02C2237E9DD30059E38D /* UIView+Rx.swift */,
+				154E02C6237E9DD30059E38D /* UIViewController+Rx.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		154E02CD237E9DD30059E38D /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				154E02CE237E9DD30059E38D /* RxErrorTracker.swift */,
+				154E02D0237E9DD30059E38D /* RxStateTracker.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		15FF784C237BB8660003D82E = {
 			isa = PBXGroup;
 			children = (
@@ -472,8 +561,10 @@
 				154E0248237D9B790059E38D /* Commons */,
 				15FF788E237BC5700003D82E /* Configs */,
 				154E02A3237E86830059E38D /* Helpers */,
+				154E02A6237E983E0059E38D /* Managers */,
 				154E023A237C75520059E38D /* Models */,
 				154E0229237C72F30059E38D /* Networks */,
+				154E02B3237E9DD20059E38D /* Rx */,
 				15FF788B237BC54A0003D82E /* Scenes */,
 			);
 			path = Classes;
@@ -810,52 +901,74 @@
 				154E0287237D9B7A0059E38D /* StoryboardInitializable.swift in Sources */,
 				15FF78A3237BEFC10003D82E /* EBWeatherListViewController.swift in Sources */,
 				154E0283237D9B7A0059E38D /* SafeAreaInsetHelper.swift in Sources */,
+				154E02DD237E9DD30059E38D /* SharedSequenceConvertibleType+Rx.swift in Sources */,
+				154E02E4237E9DD30059E38D /* SVProgressHUD+Rx.swift in Sources */,
 				154E0245237C75520059E38D /* EBWeatherModel.swift in Sources */,
 				154E027F237D9B7A0059E38D /* TimeZone+AA.swift in Sources */,
 				154E0288237D9B7A0059E38D /* XibInitializable.swift in Sources */,
+				154E02DE237E9DD30059E38D /* UIView+Rx.swift in Sources */,
+				154E02DC237E9DD30059E38D /* UISearchBar+Rx.swift in Sources */,
 				15FF78A1237BEFB80003D82E /* EBWeatherListViewModel.swift in Sources */,
 				154E0278237D9B7A0059E38D /* SVProgressHUD+AA.swift in Sources */,
 				154E028C237D9B7A0059E38D /* OrientationsSupport.swift in Sources */,
 				154E0235237C72F30059E38D /* EBWeatherForCityIDsRequest.swift in Sources */,
 				154E0289237D9B7A0059E38D /* FatalError.swift in Sources */,
+				154E02D3237E9DD30059E38D /* UINavigationBar+Rx.swift in Sources */,
 				154E028B237D9B7A0059E38D /* ViewModelType.swift in Sources */,
+				154E02E3237E9DD30059E38D /* UICollectionView+Rx.swift in Sources */,
 				154E0246237C75520059E38D /* EBCoordinateModel.swift in Sources */,
 				154E028D237D9B7A0059E38D /* FirstResponder.swift in Sources */,
 				154E027D237D9B7A0059E38D /* UserDefaults+AA.swift in Sources */,
+				154E02D8237E9DD30059E38D /* BehaviorRelay+Rx.swift in Sources */,
+				154E02E5237E9DD30059E38D /* UITableView+Rx.swift in Sources */,
 				154E0277237D9B7A0059E38D /* URL+AA.swift in Sources */,
 				154E0244237C75520059E38D /* EBTemperatureModel.swift in Sources */,
+				154E02EB237E9DD30059E38D /* RxStateTracker.swift in Sources */,
 				154E0270237D9B7A0059E38D /* String+AA.swift in Sources */,
 				154E0282237D9B7A0059E38D /* Print.swift in Sources */,
 				15FF7892237BC5E80003D82E /* EBURLConstants.swift in Sources */,
 				154E02AA237E99A20059E38D /* AppDelegate.swift in Sources */,
+				154E02DA237E9DD30059E38D /* RxAnimated+Rx.swift in Sources */,
 				154E027A237D9B7A0059E38D /* Array+AA.swift in Sources */,
 				154E027E237D9B7A0059E38D /* Encodable+AA.swift in Sources */,
 				154E0276237D9B7A0059E38D /* UIViewController+AA.swift in Sources */,
+				154E02D7237E9DD30059E38D /* UITabBarItem+Rx.swift in Sources */,
+				154E02E0237E9DD30059E38D /* Localize+Rx.swift in Sources */,
 				154E0275237D9B7A0059E38D /* UICollectionView+AA.swift in Sources */,
+				154E02D9237E9DD30059E38D /* UITabBarController+Rx.swift in Sources */,
 				154E027B237D9B7A0059E38D /* UITextField+AA.swift in Sources */,
 				154E0238237C72F30059E38D /* EBWeatherForcastRequest.swift in Sources */,
 				154E026D237D9B7A0059E38D /* UIAlertController+AA.swift in Sources */,
 				154E0243237C75520059E38D /* EBMessageModel.swift in Sources */,
+				154E02D6237E9DD30059E38D /* UIPopoverPresentationController+Rx.swift in Sources */,
 				154E0274237D9B7A0059E38D /* UIView+AA.swift in Sources */,
 				154E028A237D9B7A0059E38D /* NibProvidable.swift in Sources */,
+				154E02DB237E9DD30059E38D /* UITextField+Rx.swift in Sources */,
 				154E0281237D9B7A0059E38D /* Date+AA.swift in Sources */,
 				154E0286237D9B7A0059E38D /* BundleResource.swift in Sources */,
 				154E027C237D9B7A0059E38D /* UISearchBar+AA.swift in Sources */,
 				154E0284237D9B7A0059E38D /* Localize.swift in Sources */,
 				154E0237237C72F30059E38D /* EBWeatherForCityNameRequest.swift in Sources */,
 				15FF7935237BF44E0003D82E /* EBErrors.swift in Sources */,
+				154E02D5237E9DD30059E38D /* ObservableType+Rx.swift in Sources */,
 				154E0285237D9B7A0059E38D /* ViewReusable.swift in Sources */,
 				154E028E237D9B7A0059E38D /* StatusBarSupport.swift in Sources */,
 				154E02A5237E86A70059E38D /* EBWeatherImageMapper.swift in Sources */,
+				154E02E7237E9DD30059E38D /* UIControl+Rx.swift in Sources */,
 				154E026E237D9B7A0059E38D /* UITableView+AA.swift in Sources */,
 				154E0242237C75520059E38D /* EBWeatherReportModel.swift in Sources */,
+				154E02E8237E9DD30059E38D /* UINavigationItem+Rx.swift in Sources */,
 				154E0271237D9B7A0059E38D /* UIColor+AA.swift in Sources */,
+				154E02D2237E9DD30059E38D /* UIScrollView+Rx.swift in Sources */,
 				154E0272237D9B7A0059E38D /* KeyedDecodingContainer+AA.swift in Sources */,
 				154E0239237C72F30059E38D /* EBBaseRequests.swift in Sources */,
 				15FF7933237BF3730003D82E /* EBPreferenceConstants.swift in Sources */,
 				154E0273237D9B7A0059E38D /* Dictionary+AA.swift in Sources */,
 				154E026F237D9B7A0059E38D /* Double+AA.swift in Sources */,
 				154E0280237D9B7A0059E38D /* UIScrollView+AA.swift in Sources */,
+				154E02E2237E9DD30059E38D /* UIViewController+Rx.swift in Sources */,
+				154E02DF237E9DD30059E38D /* UIButton+Rx.swift in Sources */,
+				154E02E9237E9DD30059E38D /* RxErrorTracker.swift in Sources */,
 				154E0236237C72F30059E38D /* EBWeatherForLocationRequest.swift in Sources */,
 				154E0247237C75520059E38D /* EBWindModel.swift in Sources */,
 				154E0315238009F30059E38D /* R.generated.swift in Sources */,

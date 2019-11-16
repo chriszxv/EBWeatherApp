@@ -20,7 +20,7 @@ struct EBWeatherReportModel {
         if dateTime.isNaN {
             return "yyyy-MM-dd HH:mm:ss"
         } else {
-            return Date(timeIntervalSince1970: dateTime).string(dateFormat: .dashyyyyMMddHHmmss)
+            return Date(timeIntervalSince1970: dateTime).string(dateFormat: "yyyy-MM-dd HH:mm:ss")
         }
     }
 

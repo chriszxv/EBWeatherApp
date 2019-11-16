@@ -118,9 +118,9 @@ extension String {
 // MARK: - Date
 
 extension String {
-    func date(dateFormat: DateFormatString) -> Date {
+    func date(dateFormat: String) -> Date {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = dateFormat.rawValue
+        dateFormatter.dateFormat = dateFormat
         dateFormatter.timeZone = TimeZone.HongKongTimeZone()
         guard let date = dateFormatter.date(from: self) else {
             return Date()
@@ -128,10 +128,10 @@ extension String {
         return date
     }
 
-    func dateString(fromFormat: DateFormatString, toFormat: DateFormatString) -> String {
+    func dateString(fromFormat: String, toFormat: String) -> String {
         let date = self.date(dateFormat: fromFormat)
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = toFormat.rawValue
+        dateFormatter.dateFormat = toFormat
         dateFormatter.timeZone = TimeZone.HongKongTimeZone()
         let formattedDateString: String = dateFormatter.string(from: date)
         return formattedDateString
