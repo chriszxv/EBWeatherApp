@@ -1,4 +1,4 @@
-platform :ios, '10.0'
+platform :ios, '11.0'
 
 use_frameworks!
 
@@ -12,11 +12,10 @@ target 'EBWeatherApp' do
 	# Comment the next line if you don't want to use dynamic frameworks
 
 	# Pods for EBWeatherApp
-	pod 'Hero', '= 1.4.0'
-	pod 'R.swift', '= 5.0.3'
+	pod 'R.swift', '= 5.1.0'
 	pod 'RxAnimated', '= 0.6.1'
-	pod 'RxCocoa', '= 5.0.0'
-	pod 'RxSwift', '= 5.0.0'
+	pod 'RxCocoa', '= 5.0.1'
+	pod 'RxSwift', '= 5.0.1'
 	pod 'SnapKit', '= 5.0.1'
 	pod 'SVProgressHUD', '= 2.2.5'
 

@@ -1,0 +1,14 @@
+/*
+  Localizable.strings
+  EBWeatherApp
+
+  Created by product on 15/11/2019.
+  Copyright © 2019 AAStocks. All rights reserved.
+*/
+
+"setting_title" = "設定";
+"setting_title_language" = "語言";
+"setting_title_theme" = "主題";
+"setting_value_light" = "白";
+"setting_value_dark" = "黑";
+"setting_title_icon" = "圖像來源";

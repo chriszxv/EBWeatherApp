@@ -22,6 +22,7 @@ struct EBRequestConstants {
     struct Value {
         static let ApplicationID = "fa50bf80f3aba874aca0a2ad48316afa"
         static let Json = "json"
+        static let DefaultLocationSearchCount: UInt = 1 
         static let DefaultIntervalCount: UInt = 40 // maximum 5 days 3 hours = 5 * 24 / 3
     }
 }
