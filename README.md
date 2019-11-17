@@ -15,12 +15,12 @@ A simple weather app.
 
 ## Screenshots
 
-![](preview/1.png)
-![](preview/2.png)
-![](preview/3.png)
-![](preview/4.png)
-![](preview/5.png)
-![](preview/6.png)
+![](/Preview/1.png)
+![](/Preview/2.png)
+![](/Preview/3.png)
+![](/Preview/4.png)
+![](/Preview/5.png)
+![](/Preview/6.png)
 
 ## Build and Running
 
@@ -48,5 +48,4 @@ Icons by [Icons8](https://icons8.com/icons)
 
 ## License
 
-MIT License. See [LICENSE](https://github.com/chriszxv/EBWeatherApp/blob/master/LICENSE).
-
+MIT License. See [LICENSE](/LICENSE).
