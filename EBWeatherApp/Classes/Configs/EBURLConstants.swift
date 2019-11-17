@@ -10,18 +10,24 @@ struct EBURLConstants {
     private struct Config {
         private struct OpenWeatherDomains {
             static let PRO = "https://api.openweathermap.org"
-            static let UAT = "https://samples.openweathermap.org"
-            static let DEV = "https://samples.openweathermap.org"
+            static let DEV = "https://api.openweathermap.org"
         }
 
-        // Change to Production stage
-        static let OpenWeatherDomain = OpenWeatherDomains.PRO
+        private struct Icon8Domains {
+            static let PRO = "https://icons8.com"
+            static let DEV = "https://icons8.com"
+        }
 
-        // Change to UAT stage
-        //    private static let OpenWeatherDomain = OpenWeatherDomains.UAT
+        #if DEBUG
+            // Change to Development stage
+            static let OpenWeatherDomain = OpenWeatherDomains.DEV
+            static let Icon8Domain = Icon8Domains.DEV
+        #else
+            // Change to Production stage
+            static let OpenWeatherDomain = OpenWeatherDomains.PRO
+            static let Icon8Domain = Icon8Domains.PRO
 
-        // Change to Development stage
-        //    private static let OpenWeatherDomain = OpenWeatherDomains.DEV
+        #endif
     }
 }
 
@@ -31,18 +37,34 @@ struct EBURLConstants {
 
 extension EBURLConstants {
     struct OpenWeather {
-        struct Url {
-            static var GetWeatherForLocationRequest: String {
-                return Config.OpenWeatherDomain + "/data/2.5/find"
-            }
+        static var GetWeatherForCityIDs: String {
+            return Config.OpenWeatherDomain + "/data/2.5/group"
+        }
 
-            static var GetWeatherForcast: String {
-                return Config.OpenWeatherDomain + "/data/2.5/forecast"
-            }
+        static var GetWeatherForCityID: String {
+            return Config.OpenWeatherDomain + "/data/2.5/weather"
+        }
 
-            static var GetCurrentWeatherForIDs: String {
-                return Config.OpenWeatherDomain + "/data/2.5/group"
-            }
+        static var GetWeatherForCityName: String {
+            return Config.OpenWeatherDomain + "/data/2.5/find"
+        }
+
+        static var GetWeatherForZipCode: String {
+            return Config.OpenWeatherDomain + "/data/2.5/weather"
+        }
+
+        static var GetWeatherForLocation: String {
+            return Config.OpenWeatherDomain + "/data/2.5/weather"
+        }
+
+//        static var GetWeatherForcast: String {
+//            return Config.OpenWeatherDomain + "/data/2.5/forecast"
+//        }
+    }
+
+    struct Icon8 {
+        static var Reference: String {
+            return Config.Icon8Domain + "/"
         }
     }
 }

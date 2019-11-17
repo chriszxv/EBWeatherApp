@@ -1,0 +1,13 @@
+/*
+  InfoPlist.strings
+  EBWeatherApp
+
+  Created by product on 17/11/2019.
+  Copyright © 2019 AAStocks. All rights reserved.
+*/
+
+CFBundleDisplayName = "My Weather";
+
+NSLocationAlwaysAndWhenInUseUsageDescription = "Find the weather in your current location";
+
+NSLocationWhenInUseUsageDescription = "Find the weather in your current location";

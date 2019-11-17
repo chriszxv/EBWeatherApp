@@ -15,71 +15,71 @@ final class EBWeatherImageMapper {
         // MARK: Thunderstorm with Light Rain
 
         "200": [
-            "d": "storm_rain",
-            "n": "storm_rain",
+            "d": R.image.icon.weather.storm_rain.name,
+            "n": R.image.icon.weather.storm_rain.name,
         ],
 
         // MARK: Thunderstorm with Rain
 
         "201": [
-            "d": "storm_rain",
-            "n": "storm_rain",
+            "d": R.image.icon.weather.storm_rain.name,
+            "n": R.image.icon.weather.storm_rain.name,
         ],
 
         // MARK: Thunderstorm with Heavy Rain
 
         "202": [
-            "d": "storm_rain",
-            "n": "storm_rain",
+            "d": R.image.icon.weather.storm_rain.name,
+            "n": R.image.icon.weather.storm_rain.name,
         ],
 
         // MARK: Light Thunderstorm
 
         "210": [
-            "d": "storm_light",
-            "n": "storm_light",
+            "d": R.image.icon.weather.storm_light.name,
+            "n": R.image.icon.weather.storm_light.name,
         ],
 
         // MARK: Thunderstorm
 
         "211": [
-            "d": "storm_light",
-            "n": "storm_light",
+            "d": R.image.icon.weather.storm_light.name,
+            "n": R.image.icon.weather.storm_light.name,
         ],
 
         // MARK: Heavy Thunderstorm
 
         "212": [
-            "d": "storm_heavy",
-            "n": "storm_heavy",
+            "d": R.image.icon.weather.storm_heavy.name,
+            "n": R.image.icon.weather.storm_heavy.name,
         ],
 
         // MARK: Ragged Thunderstorm
 
         "221": [
-            "d": "storm_heavy",
-            "n": "storm_heavy",
+            "d": R.image.icon.weather.storm_heavy.name,
+            "n": R.image.icon.weather.storm_heavy.name,
         ],
 
         // MARK: Thunderstorm with Light Drizzle
 
         "230": [
-            "d": "storm_rain",
-            "n": "storm_rain",
+            "d": R.image.icon.weather.storm_rain.name,
+            "n": R.image.icon.weather.storm_rain.name,
         ],
 
         // MARK: Thunderstorm with Drizzle
 
         "231": [
-            "d": "storm_rain",
-            "n": "storm_rain",
+            "d": R.image.icon.weather.storm_rain.name,
+            "n": R.image.icon.weather.storm_rain.name,
         ],
 
         // MARK: Thunderstorm with Heavy Drizzle
 
         "232": [
-            "d": "storm_rain",
-            "n": "storm_rain",
+            "d": R.image.icon.weather.storm_rain.name,
+            "n": R.image.icon.weather.storm_rain.name,
         ],
 
         // MARK: - Group 3xx: Drizzle
@@ -87,64 +87,64 @@ final class EBWeatherImageMapper {
         // MARK: Light Intensity Drizzle
 
         "300": [
-            "d": "drizzle_light",
-            "n": "drizzle_light",
+            "d": R.image.icon.weather.drizzle_light.name,
+            "n": R.image.icon.weather.drizzle_light.name,
         ],
 
         // MARK: Drizzle
 
         "301": [
-            "d": "drizzle_light",
-            "n": "drizzle_light",
+            "d": R.image.icon.weather.drizzle_light.name,
+            "n": R.image.icon.weather.drizzle_light.name,
         ],
 
         // MARK: Heavy Intensity Drizzle
 
         "302": [
-            "d": "drizzle",
-            "n": "drizzle",
+            "d": R.image.icon.weather.drizzle.name,
+            "n": R.image.icon.weather.drizzle.name,
         ],
 
         // MARK: Light Intensity Drizzle Rain
 
         "310": [
-            "d": "drizzle",
-            "n": "drizzle",
+            "d": R.image.icon.weather.drizzle.name,
+            "n": R.image.icon.weather.drizzle.name,
         ],
 
         // MARK: Drizzle Rain
 
         "311": [
-            "d": "drizzle",
-            "n": "drizzle",
+            "d": R.image.icon.weather.drizzle.name,
+            "n": R.image.icon.weather.drizzle.name,
         ],
 
         // MARK: Heavy Intensity Drizzle Rain
 
         "312": [
-            "d": "drizzle_heavy",
-            "n": "drizzle_heavy",
+            "d": R.image.icon.weather.drizzle_heavy.name,
+            "n": R.image.icon.weather.drizzle_heavy.name,
         ],
 
         // MARK: Shower Rain and Drizzle
 
         "313": [
-            "d": "drizzle_heavy",
-            "n": "drizzle_heavy",
+            "d": R.image.icon.weather.drizzle_heavy.name,
+            "n": R.image.icon.weather.drizzle_heavy.name,
         ],
 
         // MARK: Heavy Shower Rain and Drizzle
 
         "314": [
-            "d": "drizzle_heavy",
-            "n": "drizzle_heavy",
+            "d": R.image.icon.weather.drizzle_heavy.name,
+            "n": R.image.icon.weather.drizzle_heavy.name,
         ],
 
         // MARK: Shower Drizzle
 
         "321": [
-            "d": "drizzle_heavy",
-            "n": "drizzle_heavy",
+            "d": R.image.icon.weather.drizzle_heavy.name,
+            "n": R.image.icon.weather.drizzle_heavy.name,
         ],
 
         // MARK: - Group 5xx: Rain
@@ -152,71 +152,71 @@ final class EBWeatherImageMapper {
         // MARK: Light Rain
 
         "500": [
-            "d": "rain_light",
-            "n": "rain_light",
+            "d": R.image.icon.weather.rain_light.name,
+            "n": R.image.icon.weather.rain_light.name,
         ],
 
         // MARK: Moderate Rain
 
         "501": [
-            "d": "rain_light",
-            "n": "rain_light",
+            "d": R.image.icon.weather.rain_light.name,
+            "n": R.image.icon.weather.rain_light.name,
         ],
 
         // MARK: Heavy Intensity Rain
 
         "502": [
-            "d": "rain",
-            "n": "rain",
+            "d": R.image.icon.weather.rain.name,
+            "n": R.image.icon.weather.rain.name,
         ],
 
         // MARK: Very Heavy Rain
 
         "503": [
-            "d": "rain",
-            "n": "rain",
+            "d": R.image.icon.weather.rain.name,
+            "n": R.image.icon.weather.rain.name,
         ],
 
         // MARK: Extreme Rain
 
         "504": [
-            "d": "rain",
-            "n": "rain",
+            "d": R.image.icon.weather.rain.name,
+            "n": R.image.icon.weather.rain.name,
         ],
 
         // MARK: Freezing Rain
 
         "511": [
-            "d": "rain",
-            "n": "rain",
+            "d": R.image.icon.weather.rain.name,
+            "n": R.image.icon.weather.rain.name,
         ],
 
         // MARK: Light Intensity Shower Rain
 
         "520": [
-            "d": "rain_heavy",
-            "n": "rain_heavy",
+            "d": R.image.icon.weather.rain_heavy.name,
+            "n": R.image.icon.weather.rain_heavy.name,
         ],
 
         // MARK: Shower Rain
 
         "521": [
-            "d": "rain_heavy",
-            "n": "rain_heavy",
+            "d": R.image.icon.weather.rain_heavy.name,
+            "n": R.image.icon.weather.rain_heavy.name,
         ],
 
         // MARK: Heavy Intensity Shower Rain
 
         "522": [
-            "d": "rain_heavy",
-            "n": "rain_heavy",
+            "d": R.image.icon.weather.rain_heavy.name,
+            "n": R.image.icon.weather.rain_heavy.name,
         ],
 
         // MARK: Ragged Shower Rain
 
         "531": [
-            "d": "rain_heavy",
-            "n": "rain_heavy",
+            "d": R.image.icon.weather.rain_heavy.name,
+            "n": R.image.icon.weather.rain_heavy.name,
         ],
 
         // MARK: - Group 6xx: Snow
@@ -224,78 +224,78 @@ final class EBWeatherImageMapper {
         // MARK: Light Snow
 
         "600": [
-            "d": "snow_light",
-            "n": "snow_light",
+            "d": R.image.icon.weather.snow_light.name,
+            "n": R.image.icon.weather.snow_light.name,
         ],
 
         // MARK: Snow
 
         "601": [
-            "d": "snow_light",
-            "n": "snow_light",
+            "d": R.image.icon.weather.snow_light.name,
+            "n": R.image.icon.weather.snow_light.name,
         ],
 
         // MARK: Heavy Snow
 
         "602": [
-            "d": "snow",
-            "n": "snow",
+            "d": R.image.icon.weather.snow_heavy.name,
+            "n": R.image.icon.weather.snow_heavy.name,
         ],
 
         // MARK: Sleet
 
         "611": [
-            "d": "snow_light",
-            "n": "snow_light",
+            "d": R.image.icon.weather.snow_light.name,
+            "n": R.image.icon.weather.snow_light.name,
         ],
 
         // MARK: Light Shower Sleet
 
         "612": [
-            "d": "snow_light",
-            "n": "snow_light",
+            "d": R.image.icon.weather.snow_light.name,
+            "n": R.image.icon.weather.snow_light.name,
         ],
 
         // MARK: Shower Sleet
 
         "613": [
-            "d": "snow",
-            "n": "snow",
+            "d": R.image.icon.weather.snow_heavy.name,
+            "n": R.image.icon.weather.snow_heavy.name,
         ],
 
         // MARK: Light Rain and Snow
 
         "615": [
-            "d": "snow_light",
-            "n": "snow_light",
+            "d": R.image.icon.weather.snow_light.name,
+            "n": R.image.icon.weather.snow_light.name,
         ],
 
         // MARK: Rain and Snow
 
         "616": [
-            "d": "snow",
-            "n": "snow",
+            "d": R.image.icon.weather.snow_heavy.name,
+            "n": R.image.icon.weather.snow_heavy.name,
         ],
 
         // MARK: Light Shower Snow
 
         "620": [
-            "d": "snow_light",
-            "n": "snow_light",
+            "d": R.image.icon.weather.snow_light.name,
+            "n": R.image.icon.weather.snow_light.name,
         ],
 
         // MARK: Shower Snow
 
         "621": [
-            "d": "snow",
-            "n": "snow",
+            "d": R.image.icon.weather.snow_heavy.name,
+            "n": R.image.icon.weather.snow_heavy.name,
         ],
 
         // MARK: Heavy Shower Snow
 
         "622": [
-            "d": "snow",
-            "n": "snow",
+            "d": R.image.icon.weather.snow_heavy.name,
+            "n": R.image.icon.weather.snow_heavy.name,
         ],
 
         // MARK: - Group 7xx: Atmosphere
@@ -303,71 +303,71 @@ final class EBWeatherImageMapper {
         // MARK: Mist
 
         "701": [
-            "d": "fog_day",
-            "n": "fog_night",
+            "d": R.image.icon.weather.fog_day.name,
+            "n": R.image.icon.weather.fog_night.name,
         ],
 
         // MARK: Smoke
 
         "711": [
-            "d": "fog_day",
-            "n": "fog_night",
+            "d": R.image.icon.weather.fog_day.name,
+            "n": R.image.icon.weather.fog_night.name,
         ],
 
         // MARK: Haze
 
         "721": [
-            "d": "fog_day",
-            "n": "fog_night",
+            "d": R.image.icon.weather.fog_day.name,
+            "n": R.image.icon.weather.fog_night.name,
         ],
 
         // MARK: Sand/ Dust Whirls
 
         "731": [
-            "d": "fog_day",
-            "n": "fog_night",
+            "d": R.image.icon.weather.fog_day.name,
+            "n": R.image.icon.weather.fog_night.name,
         ],
 
         // MARK: Fog
 
         "741": [
-            "d": "fog_day",
-            "n": "fog_night",
+            "d": R.image.icon.weather.fog_day.name,
+            "n": R.image.icon.weather.fog_night.name,
         ],
 
         // MARK: Sand
 
         "751": [
-            "d": "fog_day",
-            "n": "fog_night",
+            "d": R.image.icon.weather.fog_day.name,
+            "n": R.image.icon.weather.fog_night.name,
         ],
 
         // MARK: Dust
 
         "761": [
-            "d": "fog_day",
-            "n": "fog_night",
+            "d": R.image.icon.weather.fog_day.name,
+            "n": R.image.icon.weather.fog_night.name,
         ],
 
         // MARK: Volcanic Ash
 
         "762": [
-            "d": "fog_day",
-            "n": "fog_night",
+            "d": R.image.icon.weather.fog_day.name,
+            "n": R.image.icon.weather.fog_night.name,
         ],
 
         // MARK: Squalls
 
         "771": [
-            "d": "fog_day",
-            "n": "fog_night",
+            "d": R.image.icon.weather.fog_day.name,
+            "n": R.image.icon.weather.fog_night.name,
         ],
 
         // MARK: Tornado
 
         "781": [
-            "d": "tornado",
-            "n": "tornado",
+            "d": R.image.icon.weather.tornado.name,
+            "n": R.image.icon.weather.tornado.name,
         ],
 
         // MARK: - Group 800: Clear
@@ -375,8 +375,8 @@ final class EBWeatherImageMapper {
         // MARK: Clear Sky
 
         "800": [
-            "d": "clear_day",
-            "n": "clear_night",
+            "d": R.image.icon.weather.clear_day.name,
+            "n": R.image.icon.weather.clear_night.name,
         ],
 
         // MARK: - Group 80x: Clouds
@@ -384,29 +384,29 @@ final class EBWeatherImageMapper {
         // MARK: Few Clouds:, 11_25%
 
         "801": [
-            "d": "cloudy_day",
-            "n": "cloudy_night",
+            "d": R.image.icon.weather.cloudy_day.name,
+            "n": R.image.icon.weather.cloudy_night.name,
         ],
 
         // MARK: Scattered Clouds:, 25_50%
 
         "802": [
-            "d": "cloudy_day",
-            "n": "cloudy_night",
+            "d": R.image.icon.weather.cloudy_day.name,
+            "n": R.image.icon.weather.cloudy_night.name,
         ],
 
         // MARK: Broken Clouds:, 51_84%
 
         "803": [
-            "d": "cloudy",
-            "n": "cloudy",
+            "d": R.image.icon.weather.cloudy.name,
+            "n": R.image.icon.weather.cloudy.name,
         ],
 
         // MARK: Overcast Clouds:, 85_100%
 
         "804": [
-            "d": "cloudy_heavy",
-            "n": "cloudy_heavy",
+            "d": R.image.icon.weather.cloudy_heavy.name,
+            "n": R.image.icon.weather.cloudy_heavy.name,
         ],
     ]
 
@@ -415,6 +415,6 @@ final class EBWeatherImageMapper {
             return nil
         }
         let suffix = isFilled ? "_filled" : ""
-        return "icon/weather/" + imageKey + suffix
+        return imageKey + suffix
     }
 }

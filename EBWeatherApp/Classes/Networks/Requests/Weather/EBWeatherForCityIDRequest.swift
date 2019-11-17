@@ -1,9 +1,9 @@
 //
-//  EBWeatherForLocationRequest.swift
+//  EBWeatherForCityIDRequest.swift
 //  EBWeatherApp
 //
-//  Created by Chris So on 13/11/2019.
-//  Copyright © 2019 Chris So. All rights reserved.
+//  Created by product on 17/11/2019.
+//  Copyright © 2019 AAStocks. All rights reserved.
 //
 
 /**
@@ -11,19 +11,17 @@
  &mode=json
  &units=metric
  &lang=zh_tw
- &lat=55.5
- &lon=37.5
+ &id=1819729
  */
-final class EBWeatherForLocationRequest: EBBaseRequest {
+final class EBWeatherForCityIDRequest: EBBaseRequest {
     let method = EBRequestMethod.GET
-    let url = EBURLConstants.OpenWeather.GetWeatherForLocation
+    let url = EBURLConstants.OpenWeather.GetWeatherForCityID
     let parameters: [String: String]
 
     init(applicationID: String = EBRequestConstants.Value.ApplicationID,
          temperatureFormat: EBRequestTemperatureFormat = .celsius,
          language: EBRequestLanguage = .english,
-         latitude: Double,
-         longitude: Double) {
+         cityID: String) {
         var parameters: [String: String] = [:]
 
         if !applicationID.isEmpty {
@@ -40,14 +38,10 @@ final class EBWeatherForLocationRequest: EBBaseRequest {
             parameters[EBRequestConstants.Key.Language] = language.rawValue
         }
 
-        if !latitude.isNaN {
-            parameters[EBRequestConstants.Key.Latitude] = String(latitude)
+        if !cityID.isEmpty {
+            parameters[EBRequestConstants.Key.CityID] = cityID
         }
         
-        if !longitude.isNaN {
-            parameters[EBRequestConstants.Key.Longitude] = String(longitude)
-        }
-
         self.parameters = parameters
     }
 }

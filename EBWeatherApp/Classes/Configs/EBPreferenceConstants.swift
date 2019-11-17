@@ -7,15 +7,9 @@
 //
 
 struct EBPreferenceConstants {
-    struct UserDefaultsKey {
-        static let CityWeatherReportList = "EBCityWeatherReportList"
-    }
-
-    struct Maximum {
-        static let LocationSearchCount = 30
-    }
-
-    struct DefaultValue {
-        static let ExampleLocation = "Hong Kong"
+    struct UserDefaults {
+        struct Key {
+            static let WeatherReports = "EBWeatherReports"
+        }
     }
 }

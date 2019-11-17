@@ -61,29 +61,43 @@ extension EBTemperatureModel: Codable {
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
 
-        do {
-            temperature = try container.decode(.temperature)
-        } catch {
+        if let valueDouble = try? container.decode(Double.self, forKey: .temperature) {
+            temperature = valueDouble
+        } else if let valueString = try? container.decode(String.self, forKey: .temperature) {
+            temperature = Double(valueString) ?? .nan
+        } else {
             temperature = .nan
         }
-        do {
-            pressure = try container.decode(.pressure)
-        } catch {
+
+        if let valueDouble = try? container.decode(Double.self, forKey: .pressure) {
+            pressure = valueDouble
+        } else if let valueString = try? container.decode(String.self, forKey: .pressure) {
+            pressure = Double(valueString) ?? .nan
+        } else {
             pressure = .nan
         }
-        do {
-            humidity = try container.decode(.humidity)
-        } catch {
+
+        if let valueDouble = try? container.decode(Double.self, forKey: .humidity) {
+            humidity = valueDouble
+        } else if let valueString = try? container.decode(String.self, forKey: .humidity) {
+            humidity = Double(valueString) ?? .nan
+        } else {
             humidity = .nan
         }
-        do {
-            mimimumTemperature = try container.decode(.mimimumTemperature)
-        } catch {
+
+        if let valueDouble = try? container.decode(Double.self, forKey: .mimimumTemperature) {
+            mimimumTemperature = valueDouble
+        } else if let valueString = try? container.decode(String.self, forKey: .mimimumTemperature) {
+            mimimumTemperature = Double(valueString) ?? .nan
+        } else {
             mimimumTemperature = .nan
         }
-        do {
-            maximumTemperature = try container.decode(.maximumTemperature)
-        } catch {
+
+        if let valueDouble = try? container.decode(Double.self, forKey: .maximumTemperature) {
+            maximumTemperature = valueDouble
+        } else if let valueString = try? container.decode(String.self, forKey: .maximumTemperature) {
+            maximumTemperature = Double(valueString) ?? .nan
+        } else {
             maximumTemperature = .nan
         }
     }

@@ -1,9 +1,194 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cnO-HC-bML">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <scenes/>
+    <scenes>
+        <!--Weather List View Controller-->
+        <scene sceneID="w2T-FC-awL">
+            <objects>
+                <viewController storyboardIdentifier="EBWeatherListViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="cnO-HC-bML" customClass="EBWeatherListViewController" customModule="EBWeatherApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RpS-r3-mpJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="j6L-ef-nHE">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="j6L-ef-nHE" firstAttribute="top" secondItem="RpS-r3-mpJ" secondAttribute="top" id="LqD-fm-IHl"/>
+                            <constraint firstItem="j6L-ef-nHE" firstAttribute="trailing" secondItem="JEy-VM-c5o" secondAttribute="trailing" id="SHb-Cb-B2R"/>
+                            <constraint firstItem="j6L-ef-nHE" firstAttribute="leading" secondItem="JEy-VM-c5o" secondAttribute="leading" id="caM-Vu-JXe"/>
+                            <constraint firstAttribute="bottom" secondItem="j6L-ef-nHE" secondAttribute="bottom" id="iBR-J4-1ZC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="JEy-VM-c5o"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="M1T-dJ-He4">
+                        <nil key="title"/>
+                        <barButtonItem key="rightBarButtonItem" id="mRW-Nr-x53">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ADw-eV-7jM">
+                                <rect key="frame" x="344" y="0.0" width="50" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="aIA-pv-DXd"/>
+                                </constraints>
+                                <state key="normal" image="icon/general/gear"/>
+                                <state key="highlighted" image="icon/general/gear_filled"/>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="settingButton" destination="ADw-eV-7jM" id="9rg-A0-sGv"/>
+                        <outlet property="tableView" destination="j6L-ef-nHE" id="UOo-6f-hvi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pit-4h-2ro" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="551" y="7"/>
+        </scene>
+        <!--Weather Search View Controller-->
+        <scene sceneID="liH-Os-Y17">
+            <objects>
+                <viewController storyboardIdentifier="EBWeatherSearchViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="eqF-FW-EZL" customClass="EBWeatherSearchViewController" customModule="EBWeatherApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7gp-Oy-cj9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dac-Mf-Zed">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hoA-2H-hIZ">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="dac-Mf-Zed" firstAttribute="trailing" secondItem="7gp-Oy-cj9" secondAttribute="trailing" id="3yO-9u-W4I"/>
+                            <constraint firstAttribute="bottom" secondItem="dac-Mf-Zed" secondAttribute="bottom" id="Gxg-4h-Ncj"/>
+                            <constraint firstItem="dac-Mf-Zed" firstAttribute="top" secondItem="7gp-Oy-cj9" secondAttribute="top" id="ZDQ-1D-h9X"/>
+                            <constraint firstItem="dac-Mf-Zed" firstAttribute="leading" secondItem="7gp-Oy-cj9" secondAttribute="leading" id="f5I-ei-1ay"/>
+                            <constraint firstItem="hoA-2H-hIZ" firstAttribute="top" secondItem="7gp-Oy-cj9" secondAttribute="top" id="kdu-QD-3ra"/>
+                            <constraint firstItem="hoA-2H-hIZ" firstAttribute="leading" secondItem="vu3-n0-QoE" secondAttribute="leading" id="lyR-bg-oQi"/>
+                            <constraint firstAttribute="bottom" secondItem="hoA-2H-hIZ" secondAttribute="bottom" id="s7B-C5-pUO"/>
+                            <constraint firstItem="hoA-2H-hIZ" firstAttribute="trailing" secondItem="vu3-n0-QoE" secondAttribute="trailing" id="wBJ-fb-XmA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="vu3-n0-QoE"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="2m3-iH-xKg">
+                        <nil key="title"/>
+                        <barButtonItem key="leftBarButtonItem" id="PRH-eY-i43">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="PdX-o0-bgE">
+                                <rect key="frame" x="20" y="0.0" width="50" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="U5W-Rv-8vr"/>
+                                </constraints>
+                                <state key="normal" image="icon/general/pin"/>
+                                <state key="highlighted" image="icon/general/pin_filled"/>
+                            </button>
+                        </barButtonItem>
+                        <view key="titleView" contentMode="scaleToFill" id="HnD-vO-Fn1" customClass="EBTitleView" customModule="EBWeatherApp" customModuleProvider="target">
+                            <rect key="frame" x="76" y="0.0" width="262" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jp9-mq-rc0" customClass="EBTextField" customModule="EBWeatherApp" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="262" height="44"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="Jp9-mq-rc0" secondAttribute="bottom" id="JeI-lS-eTw"/>
+                                <constraint firstAttribute="trailing" secondItem="Jp9-mq-rc0" secondAttribute="trailing" id="d7j-LL-0he"/>
+                                <constraint firstItem="Jp9-mq-rc0" firstAttribute="leading" secondItem="HnD-vO-Fn1" secondAttribute="leading" id="lqj-5B-Ve9"/>
+                                <constraint firstItem="Jp9-mq-rc0" firstAttribute="top" secondItem="HnD-vO-Fn1" secondAttribute="top" id="uKf-UV-PZn"/>
+                            </constraints>
+                        </view>
+                        <barButtonItem key="rightBarButtonItem" id="wJk-Yi-utk">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="A11-dn-01r">
+                                <rect key="frame" x="344" y="0.0" width="50" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="5fD-42-oK6"/>
+                                </constraints>
+                                <state key="normal" image="icon/general/cross"/>
+                                <state key="highlighted" image="icon/general/cross_filled"/>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="backgroundView" destination="dac-Mf-Zed" id="xgF-op-SGV"/>
+                        <outlet property="closeButton" destination="A11-dn-01r" id="bGN-fc-vOm"/>
+                        <outlet property="locateButton" destination="PdX-o0-bgE" id="saO-Jv-IaB"/>
+                        <outlet property="tableView" destination="hoA-2H-hIZ" id="MIZ-UC-0AJ"/>
+                        <outlet property="textField" destination="Jp9-mq-rc0" id="FDc-ZO-B87"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9st-Ie-FXX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1330.4347826086957" y="6.6964285714285712"/>
+        </scene>
+        <!--Weather Detail View Controller-->
+        <scene sceneID="GEB-F9-hkw">
+            <objects>
+                <viewController storyboardIdentifier="EBWeatherDetailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="hme-2g-HQ9" customClass="EBWeatherDetailViewController" customModule="EBWeatherApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qQg-S8-x1r">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ycy-xH-PRP" customClass="EBScrollStackView" customModule="EBWeatherApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Ycy-xH-PRP" secondAttribute="bottom" id="E8j-Yg-GRd"/>
+                            <constraint firstItem="Ycy-xH-PRP" firstAttribute="top" secondItem="qQg-S8-x1r" secondAttribute="top" id="S71-QA-hvw"/>
+                            <constraint firstItem="Ycy-xH-PRP" firstAttribute="leading" secondItem="riT-82-rV9" secondAttribute="leading" id="ZbX-D6-It1"/>
+                            <constraint firstItem="Ycy-xH-PRP" firstAttribute="trailing" secondItem="riT-82-rV9" secondAttribute="trailing" id="zpZ-sh-U5K"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="riT-82-rV9"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="2zh-69-8l3">
+                        <nil key="title"/>
+                        <view key="titleView" contentMode="scaleToFill" id="oFj-dI-TMu" customClass="AATHSTitleView" customModule="AATHSCore" customModuleProvider="target">
+                            <rect key="frame" x="207" y="22" width="0.0" height="0.0"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <viewLayoutGuide key="safeArea" id="WJr-0A-B7U"/>
+                        </view>
+                        <connections>
+                            <outlet property="titleView" destination="oFj-dI-TMu" id="3xq-QZ-drZ"/>
+                        </connections>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="scrollStackView" destination="Ycy-xH-PRP" id="M4b-lw-Ah9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="biF-z1-hEE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2047.826086956522" y="6.6964285714285712"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="icon/general/cross" width="25" height="25"/>
+        <image name="icon/general/cross_filled" width="25" height="25"/>
+        <image name="icon/general/gear" width="25" height="25"/>
+        <image name="icon/general/gear_filled" width="25" height="25"/>
+        <image name="icon/general/pin" width="25" height="25"/>
+        <image name="icon/general/pin_filled" width="25" height="25"/>
+    </resources>
 </document>

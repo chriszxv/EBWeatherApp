@@ -15,10 +15,10 @@
  */
 final class EBWeatherForCityIDsRequest: EBBaseRequest {
     let method = EBRequestMethod.GET
-    let url = EBURLConstants.OpenWeather.Url.GetWeatherForcast
+    let url = EBURLConstants.OpenWeather.GetWeatherForCityIDs
     let parameters: [String: String]
 
-    init(applicationID: String = EBRequestConstants.Key.ApplicationID,
+    init(applicationID: String = EBRequestConstants.Value.ApplicationID,
          temperatureFormat: EBRequestTemperatureFormat = .celsius,
          language: EBRequestLanguage = .english,
          cityIDs: [String]) {
@@ -41,6 +41,7 @@ final class EBWeatherForCityIDsRequest: EBBaseRequest {
         if !cityIDs.isEmpty {
             parameters[EBRequestConstants.Key.CityID] = cityIDs.joined(separator: ",")
         }
+        
         self.parameters = parameters
     }
 }

@@ -32,7 +32,8 @@ final class EBAppManager {
     }
 
     private func _setupStates() {
-//        _ = EBPreferenceManager.shared
+        // Start up states
+        _ = EBPreferenceManager.shared
     }
 
     private func _setupUIs() {
@@ -40,13 +41,8 @@ final class EBAppManager {
     }
 
     private func _setupBindings() {
-        _bindThemeService()
         _bindLocaleService()
         _bindUIs()
-    }
-
-    private func _bindThemeService() {
-        // None
     }
 
     private func _bindLocaleService() {
@@ -61,12 +57,14 @@ final class EBAppManager {
 // MARK: - Interface
 
 extension EBAppManager {
-    func configureMainInterface() -> UIViewController {
-        let viewController = EBSettingRootViewController.instantiateFromStoryboard()
-        let navigator = EBSettingRootNavigator(viewController: viewController)
-        let viewModel = EBSettingRootViewModel(navigator: navigator)
+    func configureMainInterface() -> UINavigationController {
+        let navigationController = EBClearNavigationController()
+        let viewController = EBWeatherListViewController.instantiateFromStoryboard()
+        let navigator = EBWeatherListNavigator(navigationController: navigationController)
+        let viewModel = EBWeatherListViewModel(navigator: navigator)
         viewController.viewModel = viewModel
-        viewController.modalPresentationStyle = .fullScreen
-        return viewController
+        navigationController.viewControllers = [viewController]
+        navigationController.modalPresentationStyle = .fullScreen
+        return navigationController
     }
 }
