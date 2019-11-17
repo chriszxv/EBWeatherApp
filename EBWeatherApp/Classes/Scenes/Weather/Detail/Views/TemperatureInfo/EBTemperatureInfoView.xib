@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" userLabel="EBTemperatureInfoView" customClass="EBTemperatureInfoView" customModule="EBWeatherApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="178"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RfN-Ee-Hir">
+                    <rect key="frame" x="255" y="103" width="125" height="75"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon/weather/cloud_dash" highlightedImage="icon/weather/cloud_dash_filled" translatesAutoresizingMaskIntoConstraints="NO" id="8bv-aK-5Nm">
+                            <rect key="frame" x="37.5" y="12.5" width="50" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="DHh-h6-9of"/>
+                                <constraint firstAttribute="width" constant="50" id="lBd-83-9yi"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="125" id="e1o-Ke-iB2"/>
+                        <constraint firstItem="8bv-aK-5Nm" firstAttribute="centerY" secondItem="RfN-Ee-Hir" secondAttribute="centerY" id="eTQ-gn-Ypm"/>
+                        <constraint firstAttribute="height" constant="75" id="jqx-IB-67I"/>
+                        <constraint firstItem="8bv-aK-5Nm" firstAttribute="centerX" secondItem="RfN-Ee-Hir" secondAttribute="centerX" id="nhs-hk-c3R"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--°C" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="7Bp-kA-77h">
+                    <rect key="frame" x="10" y="10" width="204" height="158"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="100"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="7Bp-kA-77h" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="0V9-48-bmh"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="RfN-Ee-Hir" secondAttribute="trailing" constant="-5" id="GOR-QS-g01"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="RfN-Ee-Hir" secondAttribute="bottom" id="nKe-Zj-9A8"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="7Bp-kA-77h" secondAttribute="bottom" constant="10" id="ncA-IA-ZmE"/>
+                <constraint firstItem="7Bp-kA-77h" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="rJP-AF-Duz"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="temperatureLabel" destination="7Bp-kA-77h" id="uBN-Be-Q2b"/>
+                <outlet property="weatherConainerView" destination="RfN-Ee-Hir" id="uk0-oI-vcg"/>
+                <outlet property="weatherImageView" destination="8bv-aK-5Nm" id="M4y-fH-2lM"/>
+            </connections>
+            <point key="canvasLocation" x="75" y="60"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icon/weather/cloud_dash" width="50" height="50"/>
+        <image name="icon/weather/cloud_dash_filled" width="50" height="50"/>
+    </resources>
+</document>

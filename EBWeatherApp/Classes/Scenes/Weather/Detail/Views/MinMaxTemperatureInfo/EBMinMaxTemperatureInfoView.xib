@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="JyT-Ed-DB8" customClass="EBMinMaxTemperatureInfoView" customModule="EBWeatherApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="xEe-L2-ejr">
+                    <rect key="frame" x="10" y="0.0" width="355" height="40"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="mvl-Bp-yx6">
+                            <rect key="frame" x="0.0" y="0.0" width="172.5" height="40"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="--" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9YL-PN-bl4">
+                                    <rect key="frame" x="0.0" y="0.0" width="172.5" height="40"/>
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="kcB-Jx-jnT">
+                            <rect key="frame" x="182.5" y="0.0" width="172.5" height="40"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3TT-eM-KUG">
+                                    <rect key="frame" x="0.0" y="0.0" width="172.5" height="40"/>
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                </stackView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fYm-ea-PCQ">
+                    <rect key="frame" x="10" y="39" width="355" height="1"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="9Kp-YZ-r5P"/>
+                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="1" id="JRM-ub-oah"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="1" id="re6-PG-Ovc"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="lpg-jz-ZQt"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="xEe-L2-ejr" firstAttribute="top" secondItem="JyT-Ed-DB8" secondAttribute="top" id="Ccc-a6-DEV"/>
+                <constraint firstItem="xEe-L2-ejr" firstAttribute="leading" secondItem="JyT-Ed-DB8" secondAttribute="leading" constant="10" id="Nio-td-tMA"/>
+                <constraint firstAttribute="bottom" secondItem="fYm-ea-PCQ" secondAttribute="bottom" id="RIW-NH-bXb"/>
+                <constraint firstAttribute="trailing" secondItem="fYm-ea-PCQ" secondAttribute="trailing" constant="10" id="UQh-hD-y8m"/>
+                <constraint firstAttribute="trailing" secondItem="xEe-L2-ejr" secondAttribute="trailing" constant="10" id="bhv-Pr-4cj"/>
+                <constraint firstItem="fYm-ea-PCQ" firstAttribute="leading" secondItem="JyT-Ed-DB8" secondAttribute="leading" constant="10" id="fmp-fz-r77"/>
+                <constraint firstAttribute="bottom" secondItem="xEe-L2-ejr" secondAttribute="bottom" id="kJ8-6Q-h50"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="minMaxTemperatureLabel" destination="3TT-eM-KUG" id="8Aa-cm-6Uy"/>
+                <outlet property="separatorView" destination="fYm-ea-PCQ" id="fL1-SV-gTL"/>
+                <outlet property="weatherConditionLabel" destination="9YL-PN-bl4" id="EJp-i9-E3G"/>
+            </connections>
+            <point key="canvasLocation" x="139" y="144"/>
+        </view>
+    </objects>
+</document>
