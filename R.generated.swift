@@ -197,61 +197,50 @@ struct R: Rswift.Validatable {
       fileprivate init() {}
     }
 
-    /// This `R.color.text` struct is generated, and contains static references to 5 colors.
+    /// This `R.color.text` struct is generated, and contains static references to 4 colors.
     struct text {
-      /// Color `on_background`.
-      static let on_background = Rswift.ColorResource(bundle: R.hostingBundle, name: "text/on_background")
-      /// Color `on_error`.
-      static let on_error = Rswift.ColorResource(bundle: R.hostingBundle, name: "text/on_error")
-      /// Color `on_primary`.
-      static let on_primary = Rswift.ColorResource(bundle: R.hostingBundle, name: "text/on_primary")
-      /// Color `on_secondary`.
-      static let on_secondary = Rswift.ColorResource(bundle: R.hostingBundle, name: "text/on_secondary")
-      /// Color `on_surface`.
-      static let on_surface = Rswift.ColorResource(bundle: R.hostingBundle, name: "text/on_surface")
+      /// Color `error`.
+      static let error = Rswift.ColorResource(bundle: R.hostingBundle, name: "text/error")
+      /// Color `primary_light_20`.
+      static let primary_light_20 = Rswift.ColorResource(bundle: R.hostingBundle, name: "text/primary_light_20")
+      /// Color `primary`.
+      static let primary = Rswift.ColorResource(bundle: R.hostingBundle, name: "text/primary")
+      /// Color `surface`.
+      static let surface = Rswift.ColorResource(bundle: R.hostingBundle, name: "text/surface")
 
       #if os(iOS) || os(tvOS)
-      /// `UIColor(named: "on_background", bundle: ..., traitCollection: ...)`
+      /// `UIColor(named: "error", bundle: ..., traitCollection: ...)`
       @available(tvOS 11.0, *)
       @available(iOS 11.0, *)
-      static func on_background(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
-        return UIKit.UIColor(resource: R.color.text.on_background, compatibleWith: traitCollection)
+      static func error(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+        return UIKit.UIColor(resource: R.color.text.error, compatibleWith: traitCollection)
       }
       #endif
 
       #if os(iOS) || os(tvOS)
-      /// `UIColor(named: "on_error", bundle: ..., traitCollection: ...)`
+      /// `UIColor(named: "primary", bundle: ..., traitCollection: ...)`
       @available(tvOS 11.0, *)
       @available(iOS 11.0, *)
-      static func on_error(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
-        return UIKit.UIColor(resource: R.color.text.on_error, compatibleWith: traitCollection)
+      static func primary(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+        return UIKit.UIColor(resource: R.color.text.primary, compatibleWith: traitCollection)
       }
       #endif
 
       #if os(iOS) || os(tvOS)
-      /// `UIColor(named: "on_primary", bundle: ..., traitCollection: ...)`
+      /// `UIColor(named: "primary_light_20", bundle: ..., traitCollection: ...)`
       @available(tvOS 11.0, *)
       @available(iOS 11.0, *)
-      static func on_primary(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
-        return UIKit.UIColor(resource: R.color.text.on_primary, compatibleWith: traitCollection)
+      static func primary_light_20(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+        return UIKit.UIColor(resource: R.color.text.primary_light_20, compatibleWith: traitCollection)
       }
       #endif
 
       #if os(iOS) || os(tvOS)
-      /// `UIColor(named: "on_secondary", bundle: ..., traitCollection: ...)`
+      /// `UIColor(named: "surface", bundle: ..., traitCollection: ...)`
       @available(tvOS 11.0, *)
       @available(iOS 11.0, *)
-      static func on_secondary(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
-        return UIKit.UIColor(resource: R.color.text.on_secondary, compatibleWith: traitCollection)
-      }
-      #endif
-
-      #if os(iOS) || os(tvOS)
-      /// `UIColor(named: "on_surface", bundle: ..., traitCollection: ...)`
-      @available(tvOS 11.0, *)
-      @available(iOS 11.0, *)
-      static func on_surface(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
-        return UIKit.UIColor(resource: R.color.text.on_surface, compatibleWith: traitCollection)
+      static func surface(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+        return UIKit.UIColor(resource: R.color.text.surface, compatibleWith: traitCollection)
       }
       #endif
 
@@ -267,10 +256,10 @@ struct R: Rswift.Validatable {
     struct icon {
       /// This `R.image.icon.action` struct is generated, and contains static references to 6 images.
       struct action {
-        /// Image `navigation_circle_filled`.
-        static let navigation_circle_filled = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon/action/navigation_circle_filled")
-        /// Image `navigation_circle`.
-        static let navigation_circle = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon/action/navigation_circle")
+        /// Image `chevron_top_circle_filled`.
+        static let chevron_top_circle_filled = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon/action/chevron_top_circle_filled")
+        /// Image `chevron_top_circle`.
+        static let chevron_top_circle = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon/action/chevron_top_circle")
         /// Image `plus_circle_filled`.
         static let plus_circle_filled = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon/action/plus_circle_filled")
         /// Image `plus_circle`.
@@ -281,16 +270,16 @@ struct R: Rswift.Validatable {
         static let synchronize_circle = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon/action/synchronize_circle")
 
         #if os(iOS) || os(tvOS)
-        /// `UIImage(named: "navigation_circle", bundle: ..., traitCollection: ...)`
-        static func navigation_circle(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-          return UIKit.UIImage(resource: R.image.icon.action.navigation_circle, compatibleWith: traitCollection)
+        /// `UIImage(named: "chevron_top_circle", bundle: ..., traitCollection: ...)`
+        static func chevron_top_circle(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+          return UIKit.UIImage(resource: R.image.icon.action.chevron_top_circle, compatibleWith: traitCollection)
         }
         #endif
 
         #if os(iOS) || os(tvOS)
-        /// `UIImage(named: "navigation_circle_filled", bundle: ..., traitCollection: ...)`
-        static func navigation_circle_filled(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-          return UIKit.UIImage(resource: R.image.icon.action.navigation_circle_filled, compatibleWith: traitCollection)
+        /// `UIImage(named: "chevron_top_circle_filled", bundle: ..., traitCollection: ...)`
+        static func chevron_top_circle_filled(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+          return UIKit.UIImage(resource: R.image.icon.action.chevron_top_circle_filled, compatibleWith: traitCollection)
         }
         #endif
 
@@ -829,28 +818,72 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.nib` struct is generated, and contains static references to 3 nibs.
+  /// This `R.nib` struct is generated, and contains static references to 9 nibs.
   struct nib {
-    /// Nib `EBRequestErrorEmptySetView`.
-    static let ebRequestErrorEmptySetView = _R.nib._EBRequestErrorEmptySetView()
-    /// Nib `EBWeatherListEmptySetView`.
-    static let ebWeatherListEmptySetView = _R.nib._EBWeatherListEmptySetView()
+    /// Nib `EBCityInfoView`.
+    static let ebCityInfoView = _R.nib._EBCityInfoView()
+    /// Nib `EBListEmptySetView`.
+    static let ebListEmptySetView = _R.nib._EBListEmptySetView()
+    /// Nib `EBMinMaxTemperatureInfoView`.
+    static let ebMinMaxTemperatureInfoView = _R.nib._EBMinMaxTemperatureInfoView()
+    /// Nib `EBNetworkEmptySetView`.
+    static let ebNetworkEmptySetView = _R.nib._EBNetworkEmptySetView()
+    /// Nib `EBTemperatureInfoView`.
+    static let ebTemperatureInfoView = _R.nib._EBTemperatureInfoView()
+    /// Nib `EBWeatherListHeaderView`.
+    static let ebWeatherListHeaderView = _R.nib._EBWeatherListHeaderView()
     /// Nib `EBWeatherListItemCell`.
     static let ebWeatherListItemCell = _R.nib._EBWeatherListItemCell()
+    /// Nib `EBWeatherSearchItemCell`.
+    static let ebWeatherSearchItemCell = _R.nib._EBWeatherSearchItemCell()
+    /// Nib `EBWindHumidityInfoView`.
+    static let ebWindHumidityInfoView = _R.nib._EBWindHumidityInfoView()
 
     #if os(iOS) || os(tvOS)
-    /// `UINib(name: "EBRequestErrorEmptySetView", in: bundle)`
-    @available(*, deprecated, message: "Use UINib(resource: R.nib.ebRequestErrorEmptySetView) instead")
-    static func ebRequestErrorEmptySetView(_: Void = ()) -> UIKit.UINib {
-      return UIKit.UINib(resource: R.nib.ebRequestErrorEmptySetView)
+    /// `UINib(name: "EBCityInfoView", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.ebCityInfoView) instead")
+    static func ebCityInfoView(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.ebCityInfoView)
     }
     #endif
 
     #if os(iOS) || os(tvOS)
-    /// `UINib(name: "EBWeatherListEmptySetView", in: bundle)`
-    @available(*, deprecated, message: "Use UINib(resource: R.nib.ebWeatherListEmptySetView) instead")
-    static func ebWeatherListEmptySetView(_: Void = ()) -> UIKit.UINib {
-      return UIKit.UINib(resource: R.nib.ebWeatherListEmptySetView)
+    /// `UINib(name: "EBListEmptySetView", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.ebListEmptySetView) instead")
+    static func ebListEmptySetView(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.ebListEmptySetView)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UINib(name: "EBMinMaxTemperatureInfoView", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.ebMinMaxTemperatureInfoView) instead")
+    static func ebMinMaxTemperatureInfoView(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.ebMinMaxTemperatureInfoView)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UINib(name: "EBNetworkEmptySetView", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.ebNetworkEmptySetView) instead")
+    static func ebNetworkEmptySetView(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.ebNetworkEmptySetView)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UINib(name: "EBTemperatureInfoView", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.ebTemperatureInfoView) instead")
+    static func ebTemperatureInfoView(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.ebTemperatureInfoView)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UINib(name: "EBWeatherListHeaderView", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.ebWeatherListHeaderView) instead")
+    static func ebWeatherListHeaderView(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.ebWeatherListHeaderView)
     }
     #endif
 
@@ -862,143 +895,484 @@ struct R: Rswift.Validatable {
     }
     #endif
 
-    static func ebRequestErrorEmptySetView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> EBRequestErrorEmptySetView? {
-      return R.nib.ebRequestErrorEmptySetView.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? EBRequestErrorEmptySetView
+    #if os(iOS) || os(tvOS)
+    /// `UINib(name: "EBWeatherSearchItemCell", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.ebWeatherSearchItemCell) instead")
+    static func ebWeatherSearchItemCell(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.ebWeatherSearchItemCell)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UINib(name: "EBWindHumidityInfoView", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.ebWindHumidityInfoView) instead")
+    static func ebWindHumidityInfoView(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.ebWindHumidityInfoView)
+    }
+    #endif
+
+    static func ebCityInfoView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> EBCityInfoView? {
+      return R.nib.ebCityInfoView.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? EBCityInfoView
     }
 
-    static func ebWeatherListEmptySetView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> EBWeatherListEmptySetView? {
-      return R.nib.ebWeatherListEmptySetView.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? EBWeatherListEmptySetView
+    static func ebListEmptySetView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> EBListEmptySetView? {
+      return R.nib.ebListEmptySetView.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? EBListEmptySetView
+    }
+
+    static func ebMinMaxTemperatureInfoView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> EBMinMaxTemperatureInfoView? {
+      return R.nib.ebMinMaxTemperatureInfoView.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? EBMinMaxTemperatureInfoView
+    }
+
+    static func ebNetworkEmptySetView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> EBNetworkEmptySetView? {
+      return R.nib.ebNetworkEmptySetView.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? EBNetworkEmptySetView
+    }
+
+    static func ebTemperatureInfoView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> EBTemperatureInfoView? {
+      return R.nib.ebTemperatureInfoView.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? EBTemperatureInfoView
+    }
+
+    static func ebWeatherListHeaderView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> EBWeatherListHeaderView? {
+      return R.nib.ebWeatherListHeaderView.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? EBWeatherListHeaderView
     }
 
     static func ebWeatherListItemCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> EBWeatherListItemCell? {
       return R.nib.ebWeatherListItemCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? EBWeatherListItemCell
     }
 
+    static func ebWeatherSearchItemCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> EBWeatherSearchItemCell? {
+      return R.nib.ebWeatherSearchItemCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? EBWeatherSearchItemCell
+    }
+
+    static func ebWindHumidityInfoView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> EBWindHumidityInfoView? {
+      return R.nib.ebWindHumidityInfoView.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? EBWindHumidityInfoView
+    }
+
     fileprivate init() {}
   }
 
-  /// This `R.string` struct is generated, and contains static references to 2 localization tables.
+  /// This `R.reuseIdentifier` struct is generated, and contains static references to 2 reuse identifiers.
+  struct reuseIdentifier {
+    /// Reuse identifier `EBWeatherListItemCell`.
+    static let ebWeatherListItemCell: Rswift.ReuseIdentifier<EBWeatherListItemCell> = Rswift.ReuseIdentifier(identifier: "EBWeatherListItemCell")
+    /// Reuse identifier `EBWeatherSearchItemCell`.
+    static let ebWeatherSearchItemCell: Rswift.ReuseIdentifier<EBWeatherSearchItemCell> = Rswift.ReuseIdentifier(identifier: "EBWeatherSearchItemCell")
+
+    fileprivate init() {}
+  }
+
+  /// This `R.string` struct is generated, and contains static references to 3 localization tables.
   struct string {
+    /// This `R.string.infoPlist` struct is generated, and contains static references to 3 localization keys.
+    struct infoPlist {
+      /// en translation: Find the weather in your current location
+      ///
+      /// Locales: en, zh-Hans, zh-Hant
+      static let nsLocationAlwaysAndWhenInUseUsageDescription = Rswift.StringResource(key: "NSLocationAlwaysAndWhenInUseUsageDescription", tableName: "InfoPlist", bundle: R.hostingBundle, locales: ["en", "zh-Hans", "zh-Hant"], comment: nil)
+      /// en translation: Find the weather in your current location
+      ///
+      /// Locales: en, zh-Hans, zh-Hant
+      static let nsLocationWhenInUseUsageDescription = Rswift.StringResource(key: "NSLocationWhenInUseUsageDescription", tableName: "InfoPlist", bundle: R.hostingBundle, locales: ["en", "zh-Hans", "zh-Hant"], comment: nil)
+      /// en translation: My Weather
+      ///
+      /// Locales: en, zh-Hans, zh-Hant
+      static let cfBundleDisplayName = Rswift.StringResource(key: "CFBundleDisplayName", tableName: "InfoPlist", bundle: R.hostingBundle, locales: ["en", "zh-Hans", "zh-Hant"], comment: nil)
+
+      /// en translation: Find the weather in your current location
+      ///
+      /// Locales: en, zh-Hans, zh-Hant
+      static func nsLocationAlwaysAndWhenInUseUsageDescription(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("NSLocationAlwaysAndWhenInUseUsageDescription", tableName: "InfoPlist", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "InfoPlist", preferredLanguages: preferredLanguages) else {
+          return "NSLocationAlwaysAndWhenInUseUsageDescription"
+        }
+
+        return NSLocalizedString("NSLocationAlwaysAndWhenInUseUsageDescription", tableName: "InfoPlist", bundle: bundle, comment: "")
+      }
+
+      /// en translation: Find the weather in your current location
+      ///
+      /// Locales: en, zh-Hans, zh-Hant
+      static func nsLocationWhenInUseUsageDescription(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("NSLocationWhenInUseUsageDescription", tableName: "InfoPlist", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "InfoPlist", preferredLanguages: preferredLanguages) else {
+          return "NSLocationWhenInUseUsageDescription"
+        }
+
+        return NSLocalizedString("NSLocationWhenInUseUsageDescription", tableName: "InfoPlist", bundle: bundle, comment: "")
+      }
+
+      /// en translation: My Weather
+      ///
+      /// Locales: en, zh-Hans, zh-Hant
+      static func cfBundleDisplayName(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("CFBundleDisplayName", tableName: "InfoPlist", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "InfoPlist", preferredLanguages: preferredLanguages) else {
+          return "CFBundleDisplayName"
+        }
+
+        return NSLocalizedString("CFBundleDisplayName", tableName: "InfoPlist", bundle: bundle, comment: "")
+      }
+
+      fileprivate init() {}
+    }
+
     /// This `R.string.launchScreen` struct is generated, and contains static references to 0 localization keys.
     struct launchScreen {
       fileprivate init() {}
     }
 
-    /// This `R.string.localizable` struct is generated, and contains static references to 6 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 18 localization keys.
     struct localizable {
+      /// en translation: Cancel
+      ///
+      /// Locales: en, zh-Hans, zh-Hant
+      static let action_cancel = Rswift.StringResource(key: "action_cancel", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans", "zh-Hant"], comment: nil)
+      /// en translation: Cannot add not city place into weather list.
+      ///
+      /// Locales: en, zh-Hans, zh-Hant
+      static let error_message_invalid_city = Rswift.StringResource(key: "error_message_invalid_city", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans", "zh-Hant"], comment: nil)
+      /// en translation: Confirm
+      ///
+      /// Locales: en, zh-Hans, zh-Hant
+      static let action_determine = Rswift.StringResource(key: "action_determine", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans", "zh-Hant"], comment: nil)
       /// en translation: Dark
       ///
       /// Locales: en, zh-Hans, zh-Hant
-      static let setting_value_dark = Rswift.StringResource(key: "setting_value_dark", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans", "zh-Hant"], comment: nil)
+      static let value_theme_dark = Rswift.StringResource(key: "value_theme_dark", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans", "zh-Hant"], comment: nil)
+      /// en translation: Delete
+      ///
+      /// Locales: en, zh-Hans, zh-Hant
+      static let action_delete = Rswift.StringResource(key: "action_delete", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans", "zh-Hant"], comment: nil)
       /// en translation: Icons by
       ///
       /// Locales: en, zh-Hans, zh-Hant
-      static let setting_title_icon = Rswift.StringResource(key: "setting_title_icon", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans", "zh-Hant"], comment: nil)
+      static let title_icon = Rswift.StringResource(key: "title_icon", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans", "zh-Hant"], comment: nil)
+      /// en translation: Invalid Operation
+      ///
+      /// Locales: en, zh-Hans, zh-Hant
+      static let error_title_invalid_operation = Rswift.StringResource(key: "error_title_invalid_operation", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans", "zh-Hant"], comment: nil)
       /// en translation: Language
       ///
       /// Locales: en, zh-Hans, zh-Hant
-      static let setting_title_language = Rswift.StringResource(key: "setting_title_language", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans", "zh-Hant"], comment: nil)
+      static let title_language = Rswift.StringResource(key: "title_language", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans", "zh-Hant"], comment: nil)
       /// en translation: Light
       ///
       /// Locales: en, zh-Hans, zh-Hant
-      static let setting_value_light = Rswift.StringResource(key: "setting_value_light", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans", "zh-Hant"], comment: nil)
+      static let value_theme_light = Rswift.StringResource(key: "value_theme_light", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans", "zh-Hant"], comment: nil)
+      /// en translation: Network is unstable, please try again later.
+      ///
+      /// Locales: en, zh-Hans, zh-Hant
+      static let error_message_network = Rswift.StringResource(key: "error_message_network", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans", "zh-Hant"], comment: nil)
+      /// en translation: New York / 10001,us
+      ///
+      /// Locales: en, zh-Hans, zh-Hant
+      static let placeholder_weather_search = Rswift.StringResource(key: "placeholder_weather_search", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans", "zh-Hant"], comment: nil)
+      /// en translation: Search result not found.
+      ///
+      /// Locales: en, zh-Hans, zh-Hant
+      static let error_message_empty_search_result = Rswift.StringResource(key: "error_message_empty_search_result", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans", "zh-Hant"], comment: nil)
       /// en translation: Settings
       ///
       /// Locales: en, zh-Hans, zh-Hant
-      static let setting_title = Rswift.StringResource(key: "setting_title", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans", "zh-Hant"], comment: nil)
+      static let action_setting = Rswift.StringResource(key: "action_setting", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans", "zh-Hant"], comment: nil)
+      /// en translation: Settings
+      ///
+      /// Locales: en, zh-Hans, zh-Hant
+      static let title_setting = Rswift.StringResource(key: "title_setting", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans", "zh-Hant"], comment: nil)
       /// en translation: Theme
       ///
       /// Locales: en, zh-Hans, zh-Hant
-      static let setting_title_theme = Rswift.StringResource(key: "setting_title_theme", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans", "zh-Hant"], comment: nil)
+      static let title_theme = Rswift.StringResource(key: "title_theme", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans", "zh-Hant"], comment: nil)
+      /// en translation: To enable access, tap Settings and turn on Location.
+      ///
+      /// Locales: en, zh-Hans, zh-Hant
+      static let error_message_permission_location = Rswift.StringResource(key: "error_message_permission_location", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans", "zh-Hant"], comment: nil)
+      /// en translation: Unable to access the Location
+      ///
+      /// Locales: en, zh-Hans, zh-Hant
+      static let error_title_permission_location = Rswift.StringResource(key: "error_title_permission_location", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans", "zh-Hant"], comment: nil)
+      /// en translation: Weather report list is empty.
+      ///
+      /// Locales: en, zh-Hans, zh-Hant
+      static let error_message_empty_weather_list = Rswift.StringResource(key: "error_message_empty_weather_list", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en", "zh-Hans", "zh-Hant"], comment: nil)
+
+      /// en translation: Cancel
+      ///
+      /// Locales: en, zh-Hans, zh-Hant
+      static func action_cancel(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("action_cancel", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "action_cancel"
+        }
+
+        return NSLocalizedString("action_cancel", bundle: bundle, comment: "")
+      }
+
+      /// en translation: Cannot add not city place into weather list.
+      ///
+      /// Locales: en, zh-Hans, zh-Hant
+      static func error_message_invalid_city(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("error_message_invalid_city", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "error_message_invalid_city"
+        }
+
+        return NSLocalizedString("error_message_invalid_city", bundle: bundle, comment: "")
+      }
+
+      /// en translation: Confirm
+      ///
+      /// Locales: en, zh-Hans, zh-Hant
+      static func action_determine(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("action_determine", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "action_determine"
+        }
+
+        return NSLocalizedString("action_determine", bundle: bundle, comment: "")
+      }
 
       /// en translation: Dark
       ///
       /// Locales: en, zh-Hans, zh-Hant
-      static func setting_value_dark(preferredLanguages: [String]? = nil) -> String {
+      static func value_theme_dark(preferredLanguages: [String]? = nil) -> String {
         guard let preferredLanguages = preferredLanguages else {
-          return NSLocalizedString("setting_value_dark", bundle: hostingBundle, comment: "")
+          return NSLocalizedString("value_theme_dark", bundle: hostingBundle, comment: "")
         }
 
         guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
-          return "setting_value_dark"
+          return "value_theme_dark"
         }
 
-        return NSLocalizedString("setting_value_dark", bundle: bundle, comment: "")
+        return NSLocalizedString("value_theme_dark", bundle: bundle, comment: "")
+      }
+
+      /// en translation: Delete
+      ///
+      /// Locales: en, zh-Hans, zh-Hant
+      static func action_delete(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("action_delete", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "action_delete"
+        }
+
+        return NSLocalizedString("action_delete", bundle: bundle, comment: "")
       }
 
       /// en translation: Icons by
       ///
       /// Locales: en, zh-Hans, zh-Hant
-      static func setting_title_icon(preferredLanguages: [String]? = nil) -> String {
+      static func title_icon(preferredLanguages: [String]? = nil) -> String {
         guard let preferredLanguages = preferredLanguages else {
-          return NSLocalizedString("setting_title_icon", bundle: hostingBundle, comment: "")
+          return NSLocalizedString("title_icon", bundle: hostingBundle, comment: "")
         }
 
         guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
-          return "setting_title_icon"
+          return "title_icon"
         }
 
-        return NSLocalizedString("setting_title_icon", bundle: bundle, comment: "")
+        return NSLocalizedString("title_icon", bundle: bundle, comment: "")
+      }
+
+      /// en translation: Invalid Operation
+      ///
+      /// Locales: en, zh-Hans, zh-Hant
+      static func error_title_invalid_operation(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("error_title_invalid_operation", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "error_title_invalid_operation"
+        }
+
+        return NSLocalizedString("error_title_invalid_operation", bundle: bundle, comment: "")
       }
 
       /// en translation: Language
       ///
       /// Locales: en, zh-Hans, zh-Hant
-      static func setting_title_language(preferredLanguages: [String]? = nil) -> String {
+      static func title_language(preferredLanguages: [String]? = nil) -> String {
         guard let preferredLanguages = preferredLanguages else {
-          return NSLocalizedString("setting_title_language", bundle: hostingBundle, comment: "")
+          return NSLocalizedString("title_language", bundle: hostingBundle, comment: "")
         }
 
         guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
-          return "setting_title_language"
+          return "title_language"
         }
 
-        return NSLocalizedString("setting_title_language", bundle: bundle, comment: "")
+        return NSLocalizedString("title_language", bundle: bundle, comment: "")
       }
 
       /// en translation: Light
       ///
       /// Locales: en, zh-Hans, zh-Hant
-      static func setting_value_light(preferredLanguages: [String]? = nil) -> String {
+      static func value_theme_light(preferredLanguages: [String]? = nil) -> String {
         guard let preferredLanguages = preferredLanguages else {
-          return NSLocalizedString("setting_value_light", bundle: hostingBundle, comment: "")
+          return NSLocalizedString("value_theme_light", bundle: hostingBundle, comment: "")
         }
 
         guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
-          return "setting_value_light"
+          return "value_theme_light"
         }
 
-        return NSLocalizedString("setting_value_light", bundle: bundle, comment: "")
+        return NSLocalizedString("value_theme_light", bundle: bundle, comment: "")
+      }
+
+      /// en translation: Network is unstable, please try again later.
+      ///
+      /// Locales: en, zh-Hans, zh-Hant
+      static func error_message_network(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("error_message_network", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "error_message_network"
+        }
+
+        return NSLocalizedString("error_message_network", bundle: bundle, comment: "")
+      }
+
+      /// en translation: New York / 10001,us
+      ///
+      /// Locales: en, zh-Hans, zh-Hant
+      static func placeholder_weather_search(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("placeholder_weather_search", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "placeholder_weather_search"
+        }
+
+        return NSLocalizedString("placeholder_weather_search", bundle: bundle, comment: "")
+      }
+
+      /// en translation: Search result not found.
+      ///
+      /// Locales: en, zh-Hans, zh-Hant
+      static func error_message_empty_search_result(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("error_message_empty_search_result", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "error_message_empty_search_result"
+        }
+
+        return NSLocalizedString("error_message_empty_search_result", bundle: bundle, comment: "")
       }
 
       /// en translation: Settings
       ///
       /// Locales: en, zh-Hans, zh-Hant
-      static func setting_title(preferredLanguages: [String]? = nil) -> String {
+      static func action_setting(preferredLanguages: [String]? = nil) -> String {
         guard let preferredLanguages = preferredLanguages else {
-          return NSLocalizedString("setting_title", bundle: hostingBundle, comment: "")
+          return NSLocalizedString("action_setting", bundle: hostingBundle, comment: "")
         }
 
         guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
-          return "setting_title"
+          return "action_setting"
         }
 
-        return NSLocalizedString("setting_title", bundle: bundle, comment: "")
+        return NSLocalizedString("action_setting", bundle: bundle, comment: "")
+      }
+
+      /// en translation: Settings
+      ///
+      /// Locales: en, zh-Hans, zh-Hant
+      static func title_setting(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("title_setting", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "title_setting"
+        }
+
+        return NSLocalizedString("title_setting", bundle: bundle, comment: "")
       }
 
       /// en translation: Theme
       ///
       /// Locales: en, zh-Hans, zh-Hant
-      static func setting_title_theme(preferredLanguages: [String]? = nil) -> String {
+      static func title_theme(preferredLanguages: [String]? = nil) -> String {
         guard let preferredLanguages = preferredLanguages else {
-          return NSLocalizedString("setting_title_theme", bundle: hostingBundle, comment: "")
+          return NSLocalizedString("title_theme", bundle: hostingBundle, comment: "")
         }
 
         guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
-          return "setting_title_theme"
+          return "title_theme"
         }
 
-        return NSLocalizedString("setting_title_theme", bundle: bundle, comment: "")
+        return NSLocalizedString("title_theme", bundle: bundle, comment: "")
+      }
+
+      /// en translation: To enable access, tap Settings and turn on Location.
+      ///
+      /// Locales: en, zh-Hans, zh-Hant
+      static func error_message_permission_location(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("error_message_permission_location", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "error_message_permission_location"
+        }
+
+        return NSLocalizedString("error_message_permission_location", bundle: bundle, comment: "")
+      }
+
+      /// en translation: Unable to access the Location
+      ///
+      /// Locales: en, zh-Hans, zh-Hant
+      static func error_title_permission_location(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("error_title_permission_location", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "error_title_permission_location"
+        }
+
+        return NSLocalizedString("error_title_permission_location", bundle: bundle, comment: "")
+      }
+
+      /// en translation: Weather report list is empty.
+      ///
+      /// Locales: en, zh-Hans, zh-Hant
+      static func error_message_empty_weather_list(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("error_message_empty_weather_list", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "error_message_empty_weather_list"
+        }
+
+        return NSLocalizedString("error_message_empty_weather_list", bundle: bundle, comment: "")
       }
 
       fileprivate init() {}
@@ -1033,24 +1407,39 @@ struct _R: Rswift.Validatable {
   #if os(iOS) || os(tvOS)
   struct nib: Rswift.Validatable {
     static func validate() throws {
-      try _EBRequestErrorEmptySetView.validate()
-      try _EBWeatherListEmptySetView.validate()
+      try _EBListEmptySetView.validate()
+      try _EBNetworkEmptySetView.validate()
+      try _EBTemperatureInfoView.validate()
+      try _EBWeatherListHeaderView.validate()
       try _EBWeatherListItemCell.validate()
+      try _EBWeatherSearchItemCell.validate()
+      try _EBWindHumidityInfoView.validate()
     }
 
-    struct _EBRequestErrorEmptySetView: Rswift.NibResourceType, Rswift.Validatable {
+    struct _EBCityInfoView: Rswift.NibResourceType {
       let bundle = R.hostingBundle
-      let name = "EBRequestErrorEmptySetView"
+      let name = "EBCityInfoView"
 
-      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> EBRequestErrorEmptySetView? {
-        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? EBRequestErrorEmptySetView
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> EBCityInfoView? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? EBCityInfoView
+      }
+
+      fileprivate init() {}
+    }
+
+    struct _EBListEmptySetView: Rswift.NibResourceType, Rswift.Validatable {
+      let bundle = R.hostingBundle
+      let name = "EBListEmptySetView"
+
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> EBListEmptySetView? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? EBListEmptySetView
       }
 
       static func validate() throws {
-        if UIKit.UIImage(named: "icon/action/synchronize_circle", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon/action/synchronize_circle' is used in nib 'EBRequestErrorEmptySetView', but couldn't be loaded.") }
-        if UIKit.UIImage(named: "icon/action/synchronize_circle_filled", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon/action/synchronize_circle_filled' is used in nib 'EBRequestErrorEmptySetView', but couldn't be loaded.") }
-        if UIKit.UIImage(named: "icon/weather/cloud_error", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon/weather/cloud_error' is used in nib 'EBRequestErrorEmptySetView', but couldn't be loaded.") }
-        if UIKit.UIImage(named: "icon/weather/cloud_error_filled", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon/weather/cloud_error_filled' is used in nib 'EBRequestErrorEmptySetView', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "icon/action/plus_circle", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon/action/plus_circle' is used in nib 'EBListEmptySetView', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "icon/action/plus_circle_filled", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon/action/plus_circle_filled' is used in nib 'EBListEmptySetView', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "icon/weather/cloud_dash", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon/weather/cloud_dash' is used in nib 'EBListEmptySetView', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "icon/weather/cloud_dash_filled", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon/weather/cloud_dash_filled' is used in nib 'EBListEmptySetView', but couldn't be loaded.") }
         if #available(iOS 11.0, tvOS 11.0, *) {
         }
       }
@@ -1058,19 +1447,30 @@ struct _R: Rswift.Validatable {
       fileprivate init() {}
     }
 
-    struct _EBWeatherListEmptySetView: Rswift.NibResourceType, Rswift.Validatable {
+    struct _EBMinMaxTemperatureInfoView: Rswift.NibResourceType {
       let bundle = R.hostingBundle
-      let name = "EBWeatherListEmptySetView"
+      let name = "EBMinMaxTemperatureInfoView"
 
-      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> EBWeatherListEmptySetView? {
-        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? EBWeatherListEmptySetView
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> EBMinMaxTemperatureInfoView? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? EBMinMaxTemperatureInfoView
+      }
+
+      fileprivate init() {}
+    }
+
+    struct _EBNetworkEmptySetView: Rswift.NibResourceType, Rswift.Validatable {
+      let bundle = R.hostingBundle
+      let name = "EBNetworkEmptySetView"
+
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> EBNetworkEmptySetView? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? EBNetworkEmptySetView
       }
 
       static func validate() throws {
-        if UIKit.UIImage(named: "icon/action/synchronize_circle", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon/action/synchronize_circle' is used in nib 'EBWeatherListEmptySetView', but couldn't be loaded.") }
-        if UIKit.UIImage(named: "icon/action/synchronize_circle_filled", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon/action/synchronize_circle_filled' is used in nib 'EBWeatherListEmptySetView', but couldn't be loaded.") }
-        if UIKit.UIImage(named: "icon/weather/cloud_dash", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon/weather/cloud_dash' is used in nib 'EBWeatherListEmptySetView', but couldn't be loaded.") }
-        if UIKit.UIImage(named: "icon/weather/cloud_dash_filled", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon/weather/cloud_dash_filled' is used in nib 'EBWeatherListEmptySetView', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "icon/action/synchronize_circle", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon/action/synchronize_circle' is used in nib 'EBNetworkEmptySetView', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "icon/action/synchronize_circle_filled", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon/action/synchronize_circle_filled' is used in nib 'EBNetworkEmptySetView', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "icon/weather/cloud_error", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon/weather/cloud_error' is used in nib 'EBNetworkEmptySetView', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "icon/weather/cloud_error_filled", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon/weather/cloud_error_filled' is used in nib 'EBNetworkEmptySetView', but couldn't be loaded.") }
         if #available(iOS 11.0, tvOS 11.0, *) {
         }
       }
@@ -1078,8 +1478,52 @@ struct _R: Rswift.Validatable {
       fileprivate init() {}
     }
 
-    struct _EBWeatherListItemCell: Rswift.NibResourceType, Rswift.Validatable {
+    struct _EBTemperatureInfoView: Rswift.NibResourceType, Rswift.Validatable {
       let bundle = R.hostingBundle
+      let name = "EBTemperatureInfoView"
+
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> EBTemperatureInfoView? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? EBTemperatureInfoView
+      }
+
+      static func validate() throws {
+        if UIKit.UIImage(named: "icon/weather/cloud_dash", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon/weather/cloud_dash' is used in nib 'EBTemperatureInfoView', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "icon/weather/cloud_dash_filled", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon/weather/cloud_dash_filled' is used in nib 'EBTemperatureInfoView', but couldn't be loaded.") }
+        if #available(iOS 11.0, tvOS 11.0, *) {
+        }
+      }
+
+      fileprivate init() {}
+    }
+
+    struct _EBWeatherListHeaderView: Rswift.NibResourceType, Rswift.Validatable {
+      let bundle = R.hostingBundle
+      let name = "EBWeatherListHeaderView"
+
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> EBWeatherListHeaderView? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? EBWeatherListHeaderView
+      }
+
+      static func validate() throws {
+        if UIKit.UIImage(named: "icon/general/pin_filled", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon/general/pin_filled' is used in nib 'EBWeatherListHeaderView', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "icon/general/wet", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon/general/wet' is used in nib 'EBWeatherListHeaderView', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "icon/general/wet_filled", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon/general/wet_filled' is used in nib 'EBWeatherListHeaderView', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "icon/general/wind", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon/general/wind' is used in nib 'EBWeatherListHeaderView', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "icon/general/wind_filled", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon/general/wind_filled' is used in nib 'EBWeatherListHeaderView', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "icon/weather/cloud_dash", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon/weather/cloud_dash' is used in nib 'EBWeatherListHeaderView', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "icon/weather/cloud_dash_filled", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon/weather/cloud_dash_filled' is used in nib 'EBWeatherListHeaderView', but couldn't be loaded.") }
+        if #available(iOS 11.0, tvOS 11.0, *) {
+        }
+      }
+
+      fileprivate init() {}
+    }
+
+    struct _EBWeatherListItemCell: Rswift.NibResourceType, Rswift.ReuseIdentifierType, Rswift.Validatable {
+      typealias ReusableType = EBWeatherListItemCell
+
+      let bundle = R.hostingBundle
+      let identifier = "EBWeatherListItemCell"
       let name = "EBWeatherListItemCell"
 
       func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> EBWeatherListItemCell? {
@@ -1089,6 +1533,47 @@ struct _R: Rswift.Validatable {
       static func validate() throws {
         if UIKit.UIImage(named: "icon/weather/cloud_dash", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon/weather/cloud_dash' is used in nib 'EBWeatherListItemCell', but couldn't be loaded.") }
         if UIKit.UIImage(named: "icon/weather/cloud_dash_filled", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon/weather/cloud_dash_filled' is used in nib 'EBWeatherListItemCell', but couldn't be loaded.") }
+        if #available(iOS 11.0, tvOS 11.0, *) {
+        }
+      }
+
+      fileprivate init() {}
+    }
+
+    struct _EBWeatherSearchItemCell: Rswift.NibResourceType, Rswift.ReuseIdentifierType, Rswift.Validatable {
+      typealias ReusableType = EBWeatherSearchItemCell
+
+      let bundle = R.hostingBundle
+      let identifier = "EBWeatherSearchItemCell"
+      let name = "EBWeatherSearchItemCell"
+
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> EBWeatherSearchItemCell? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? EBWeatherSearchItemCell
+      }
+
+      static func validate() throws {
+        if UIKit.UIImage(named: "icon/weather/cloud_dash", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon/weather/cloud_dash' is used in nib 'EBWeatherSearchItemCell', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "icon/weather/cloud_dash_filled", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon/weather/cloud_dash_filled' is used in nib 'EBWeatherSearchItemCell', but couldn't be loaded.") }
+        if #available(iOS 11.0, tvOS 11.0, *) {
+        }
+      }
+
+      fileprivate init() {}
+    }
+
+    struct _EBWindHumidityInfoView: Rswift.NibResourceType, Rswift.Validatable {
+      let bundle = R.hostingBundle
+      let name = "EBWindHumidityInfoView"
+
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> EBWindHumidityInfoView? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? EBWindHumidityInfoView
+      }
+
+      static func validate() throws {
+        if UIKit.UIImage(named: "icon/general/wet", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon/general/wet' is used in nib 'EBWindHumidityInfoView', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "icon/general/wet_filled", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon/general/wet_filled' is used in nib 'EBWindHumidityInfoView', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "icon/general/wind", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon/general/wind' is used in nib 'EBWindHumidityInfoView', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "icon/general/wind_filled", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon/general/wind_filled' is used in nib 'EBWindHumidityInfoView', but couldn't be loaded.") }
         if #available(iOS 11.0, tvOS 11.0, *) {
         }
       }
@@ -1130,9 +1615,6 @@ struct _R: Rswift.Validatable {
         if UIKit.UIImage(named: "icon/general/cross", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon/general/cross' is used in storyboard 'EBSetting', but couldn't be loaded.") }
         if UIKit.UIImage(named: "icon/general/cross_filled", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon/general/cross_filled' is used in storyboard 'EBSetting', but couldn't be loaded.") }
         if #available(iOS 11.0, tvOS 11.0, *) {
-          if UIKit.UIColor(named: "background/background", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'background/background' is used in storyboard 'EBSetting', but couldn't be loaded.") }
-          if UIKit.UIColor(named: "background/primary", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'background/primary' is used in storyboard 'EBSetting', but couldn't be loaded.") }
-          if UIKit.UIColor(named: "text/on_background", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'text/on_background' is used in storyboard 'EBSetting', but couldn't be loaded.") }
         }
         if _R.storyboard.ebSetting().ebSettingRootViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'ebSettingRootViewController' could not be loaded from storyboard 'EBSetting' as 'EBSettingRootViewController'.") }
       }
@@ -1146,18 +1628,35 @@ struct _R: Rswift.Validatable {
       typealias InitialController = EBWeatherListViewController
 
       let bundle = R.hostingBundle
+      let ebWeatherDetailViewController = StoryboardViewControllerResource<EBWeatherDetailViewController>(identifier: "EBWeatherDetailViewController")
       let ebWeatherListViewController = StoryboardViewControllerResource<EBWeatherListViewController>(identifier: "EBWeatherListViewController")
+      let ebWeatherSearchViewController = StoryboardViewControllerResource<EBWeatherSearchViewController>(identifier: "EBWeatherSearchViewController")
       let name = "EBWeather"
+
+      func ebWeatherDetailViewController(_: Void = ()) -> EBWeatherDetailViewController? {
+        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: ebWeatherDetailViewController)
+      }
 
       func ebWeatherListViewController(_: Void = ()) -> EBWeatherListViewController? {
         return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: ebWeatherListViewController)
       }
 
+      func ebWeatherSearchViewController(_: Void = ()) -> EBWeatherSearchViewController? {
+        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: ebWeatherSearchViewController)
+      }
+
       static func validate() throws {
+        if UIKit.UIImage(named: "icon/general/cross", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon/general/cross' is used in storyboard 'EBWeather', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "icon/general/cross_filled", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon/general/cross_filled' is used in storyboard 'EBWeather', but couldn't be loaded.") }
         if UIKit.UIImage(named: "icon/general/gear", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon/general/gear' is used in storyboard 'EBWeather', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "icon/general/gear_filled", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon/general/gear_filled' is used in storyboard 'EBWeather', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "icon/general/pin", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon/general/pin' is used in storyboard 'EBWeather', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "icon/general/pin_filled", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon/general/pin_filled' is used in storyboard 'EBWeather', but couldn't be loaded.") }
         if #available(iOS 11.0, tvOS 11.0, *) {
         }
+        if _R.storyboard.ebWeather().ebWeatherDetailViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'ebWeatherDetailViewController' could not be loaded from storyboard 'EBWeather' as 'EBWeatherDetailViewController'.") }
         if _R.storyboard.ebWeather().ebWeatherListViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'ebWeatherListViewController' could not be loaded from storyboard 'EBWeather' as 'EBWeatherListViewController'.") }
+        if _R.storyboard.ebWeather().ebWeatherSearchViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'ebWeatherSearchViewController' could not be loaded from storyboard 'EBWeather' as 'EBWeatherSearchViewController'.") }
       }
 
       fileprivate init() {}
