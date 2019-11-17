@@ -43,14 +43,19 @@ extension EBWindModel: Codable {
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
 
-        do {
-            speed = try container.decode(.speed)
-        } catch {
+        if let valueDouble = try? container.decode(Double.self, forKey: .speed) {
+            speed = valueDouble
+        } else if let valueString = try? container.decode(String.self, forKey: .speed) {
+            speed = Double(valueString) ?? .nan
+        } else {
             speed = .nan
         }
-        do {
-            degrees = try container.decode(.degrees)
-        } catch {
+
+        if let valueDouble = try? container.decode(Double.self, forKey: .degrees) {
+            degrees = valueDouble
+        } else if let valueString = try? container.decode(String.self, forKey: .degrees) {
+            degrees = Double(valueString) ?? .nan
+        } else {
             degrees = .nan
         }
     }

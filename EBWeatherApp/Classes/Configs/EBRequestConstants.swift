@@ -14,6 +14,7 @@ struct EBRequestConstants {
         static let Language = "lang"
         static let CityName = "q"
         static let CityID = "id"
+        static let ZipCode = "zip"
         static let Latitude = "lat"
         static let Longitude = "lon"
         static let Count = "cnt"
@@ -22,7 +23,6 @@ struct EBRequestConstants {
     struct Value {
         static let ApplicationID = "fa50bf80f3aba874aca0a2ad48316afa"
         static let Json = "json"
-        static let DefaultLocationSearchCount: UInt = 1 
         static let DefaultIntervalCount: UInt = 40 // maximum 5 days 3 hours = 5 * 24 / 3
     }
 }
@@ -46,6 +46,6 @@ enum EBRequestLanguage: String {
 }
 
 enum EBRequestTemperatureFormat: String {
-    case celsius = "imperial"
-    case fahrenheit = "metric"
+    case celsius = "metric"
+    case fahrenheit = "imperial"
 }

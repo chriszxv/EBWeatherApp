@@ -194,10 +194,10 @@ extension Date {
         return components
     }
 
-    func string(dateFormat: String) -> String {
+    func string(dateFormat: String, timeZone: TimeZone = TimeZone.HongKongTimeZone()) -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = dateFormat
-        dateFormatter.timeZone = TimeZone.HongKongTimeZone()
+        dateFormatter.timeZone = timeZone
         let string = dateFormatter.string(from: self)
         return string
     }
