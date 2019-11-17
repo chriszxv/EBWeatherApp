@@ -22,18 +22,27 @@ class EBBaseViewController: UIViewController {
         _setupBindings()
     }
 
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        if #available(iOS 13.0, *) {
+            if let hasUserInterfaceStyleChanged = previousTraitCollection?.hasDifferentColorAppearance(comparedTo: traitCollection),
+                hasUserInterfaceStyleChanged == true {
+                _setupUITheme()
+            }
+        }
+    }
+
     private func _setupUIs() {
-        // None
+        _setupUITheme()
+    }
+
+    private func _setupUITheme() {
+        view.backgroundColor = R.color.background.background()
     }
 
     private func _setupBindings() {
-        _bindThemeService()
         _bindLocaleService()
         _bindUIs()
-    }
-
-    private func _bindThemeService() {
-        // None
     }
 
     private func _bindLocaleService() {

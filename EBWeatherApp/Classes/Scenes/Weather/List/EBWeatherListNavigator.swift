@@ -9,10 +9,10 @@
 import UIKit
 
 final class EBWeatherListNavigator {
-    private weak var rootViewController: UIViewController!
+    private weak var rootNavigationController: UINavigationController!
 
-    init(viewController: UIViewController) {
-        rootViewController = viewController
+    init(navigationController: UINavigationController) {
+        rootNavigationController = navigationController
     }
 
     func showSetting() {
@@ -22,6 +22,26 @@ final class EBWeatherListNavigator {
         viewController.viewModel = viewModel
         viewController.modalPresentationStyle = .overCurrentContext
         viewController.modalTransitionStyle = .crossDissolve
-        rootViewController.present(viewController, animated: true)
+        rootNavigationController.present(viewController, animated: true)
+    }
+
+    func showWeatherSearch() {
+        let navigationController = EBClearNavigationController()
+        let viewController = EBWeatherSearchViewController.instantiateFromStoryboard()
+        let navigator = EBWeatherSearchNavigator(navigationController: navigationController)
+        let viewModel = EBWeatherSearchViewModel(navigator: navigator)
+        viewController.viewModel = viewModel
+        navigationController.viewControllers = [viewController]
+        navigationController.modalPresentationStyle = .overCurrentContext
+        navigationController.modalTransitionStyle = .crossDissolve
+        rootNavigationController.present(navigationController, animated: true)
+    }
+
+    func showWeatherDetail(weatherReport: EBWeatherReportModel) {
+        let viewController = EBWeatherDetailViewController.instantiateFromStoryboard()
+        let navigator = EBWeatherDetailNavigator(navigationController: rootNavigationController)
+        let viewModel = EBWeatherDetailViewModel(navigator: navigator, weatherReport: weatherReport)
+        viewController.viewModel = viewModel
+        rootNavigationController.pushViewController(viewController, animated: true)
     }
 }

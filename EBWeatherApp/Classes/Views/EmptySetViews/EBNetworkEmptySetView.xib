@@ -10,49 +10,35 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="EBWeatherListEmptySetView" customModule="EBWeatherApp" customModuleProvider="target">
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="EBNetworkEmptySetView" customModule="EBWeatherApp" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="320"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="k9C-5f-Knu">
-                    <rect key="frame" x="97.5" y="58" width="125.5" height="204"/>
+                    <rect key="frame" x="110" y="58" width="100" height="204"/>
                     <subviews>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon/weather/cloud_dash" highlightedImage="icon/weather/cloud_dash_filled" translatesAutoresizingMaskIntoConstraints="NO" id="h1g-Hm-B30">
-                            <rect key="frame" x="12.5" y="0.0" width="100" height="100"/>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon/weather/cloud_error" highlightedImage="icon/weather/cloud_error_filled" translatesAutoresizingMaskIntoConstraints="NO" id="h1g-Hm-B30">
+                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="100" id="DLR-cG-0Df"/>
                                 <constraint firstAttribute="height" constant="100" id="TrI-4T-MIL"/>
                             </constraints>
                         </imageView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error Message" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lvv-Bw-KoW">
-                            <rect key="frame" x="0.0" y="120" width="125.5" height="24"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="N/A" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Lvv-Bw-KoW">
+                            <rect key="frame" x="33.5" y="120" width="33.5" height="24"/>
                             <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="szu-Tf-qQL">
-                            <rect key="frame" x="12.5" y="164" width="100" height="40"/>
-                            <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n2M-9u-ELN">
-                                    <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
-                                    <constraints>
-                                        <constraint firstAttribute="width" constant="40" id="1H2-y4-YAi"/>
-                                        <constraint firstAttribute="height" constant="40" id="6C2-W0-lZW"/>
-                                    </constraints>
-                                    <state key="normal" image="icon/action/synchronize_circle"/>
-                                    <state key="highlighted" image="icon/action/synchronize_circle_filled"/>
-                                </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="djS-XI-9cH">
-                                    <rect key="frame" x="60" y="0.0" width="40" height="40"/>
-                                    <constraints>
-                                        <constraint firstAttribute="width" constant="40" id="erf-km-P5F"/>
-                                        <constraint firstAttribute="height" constant="40" id="zoj-ah-pTm"/>
-                                    </constraints>
-                                    <state key="normal" image="icon/action/synchronize_circle"/>
-                                    <state key="highlighted" image="icon/action/synchronize_circle_filled"/>
-                                </button>
-                            </subviews>
-                        </stackView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="djS-XI-9cH">
+                            <rect key="frame" x="30" y="164" width="40" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="40" id="erf-km-P5F"/>
+                                <constraint firstAttribute="height" constant="40" id="zoj-ah-pTm"/>
+                            </constraints>
+                            <state key="normal" image="icon/action/synchronize_circle"/>
+                            <state key="highlighted" image="icon/action/synchronize_circle_filled"/>
+                        </button>
                     </subviews>
                 </stackView>
             </subviews>
@@ -78,7 +64,7 @@
     <resources>
         <image name="icon/action/synchronize_circle" width="50" height="50"/>
         <image name="icon/action/synchronize_circle_filled" width="50" height="50"/>
-        <image name="icon/weather/cloud_dash" width="50" height="50"/>
-        <image name="icon/weather/cloud_dash_filled" width="50" height="50"/>
+        <image name="icon/weather/cloud_error" width="50" height="50"/>
+        <image name="icon/weather/cloud_error_filled" width="50" height="50"/>
     </resources>
 </document>

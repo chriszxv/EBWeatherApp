@@ -10,7 +10,7 @@ import RxCocoa
 import RxSwift
 
 final class EBJsonClient {
-    static func send<T: Codable>(_ apiRequest: EBBaseRequest, delegate: URLSessionDelegate?) -> Observable<T> {
+    static func send<T: Codable>(_ apiRequest: EBBaseRequest, delegate: URLSessionDelegate? = nil) -> Observable<T> {
         return Observable<T>.create { observer in
 
             let request = apiRequest.request()
@@ -24,8 +24,8 @@ final class EBJsonClient {
             let session = URLSession(configuration: sessionConfig,
                                      delegate: delegate,
                                      delegateQueue: OperationQueue.main)
-            let task = session.dataTask(with: request) { data, response, error in
-          
+            let task = session.dataTask(with: request) { data, _, error in
+
                 if let responseError = error {
                     print("[Response] JSON response error: " + responseError.localizedDescription)
                     observer.onError(responseError)

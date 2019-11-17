@@ -10,11 +10,8 @@ import RxCocoa
 import RxSwift
 
 class EBWeatherListItemCell: UITableViewCell {
-    @IBOutlet private var shadowView: UIView!
-
-    @IBOutlet private var containerView: UIView!
-
     @IBOutlet private var cityNameLabel: UILabel!
+    @IBOutlet private var cityCountryCodeLabel: UILabel!
     @IBOutlet private var dateLabel: UILabel!
     @IBOutlet private var temperatureLabel: UILabel!
     @IBOutlet private var weatherImageView: UIImageView!
@@ -27,26 +24,35 @@ class EBWeatherListItemCell: UITableViewCell {
         _setupBindings()
     }
 
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        if #available(iOS 13.0, *) {
+            if let hasUserInterfaceStyleChanged = previousTraitCollection?.hasDifferentColorAppearance(comparedTo: traitCollection),
+                hasUserInterfaceStyleChanged == true {
+                _setupUITheme()
+            }
+        }
+    }
+
     private func _setupUIs() {
-//        shadowView.cornerRadius = 5.0
-//        shadowView.shadowColor = UIColor.black
-//        shadowView.shadowOpacity = 0.06
-//        shadowView.shadowRadius = 2.0
-//        shadowView.layer.shadowOffset = CGSize(width: 0.0, height: 1.5)
-//        containerView.cornerRadius = 5.0
-//        thumbnailCotainerView.cornerRadius = 5.0
-//        imageCountLabel.backgroundColor = UIColor.black.withAlphaComponent(0.66)
-//        imageCountLabel.textColor = UIColor.white
+        _setupUITheme()
+    }
+
+    private func _setupUITheme() {
+        backgroundColor = R.color.background.background()
+        let view = UIView()
+        view.backgroundColor = R.color.background.primary_heavy_20()
+        selectedBackgroundView = view
+        cityNameLabel.textColor = R.color.text.primary()
+        cityCountryCodeLabel.textColor = R.color.text.primary_light_20()
+        dateLabel.textColor = R.color.text.primary_light_20()
+        temperatureLabel.textColor = R.color.text.primary()
+        weatherImageView.tintColor = R.color.background.primary()
     }
 
     private func _setupBindings() {
-        _bindThemeService()
         _bindLocaleService()
         _bindUIs()
-    }
-
-    private func _bindThemeService() {
-        // None
     }
 
     private func _bindLocaleService() {
@@ -63,9 +69,9 @@ class EBWeatherListItemCell: UITableViewCell {
 extension EBWeatherListItemCell {
     func configure(with viewModel: EBWeatherListItemCellModel) {
         cityNameLabel.text = viewModel.cityName
+        cityCountryCodeLabel.text = viewModel.cityCountryCode
         dateLabel.text = viewModel.date
         temperatureLabel.text = viewModel.temperature
-
         if let weatherImageKey = viewModel.weatherImageKey,
             let weatherImage = UIImage(named: weatherImageKey),
             let weatherHighlightedImageKey = viewModel.weatherHighlightedImageKey,

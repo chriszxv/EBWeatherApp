@@ -12,24 +12,29 @@ struct EBWeatherReportModel {
     let cityID: String
     let cityName: String
     let dateTime: TimeInterval
+    let timezone: Int
+    let system: EBSystemModel
     let coordinate: EBCoordinateModel
     let temperature: EBTemperatureModel
     let wind: EBWindModel
     let weather: [EBWeatherModel]
-
     var displayDate: String {
         if dateTime.isNaN {
             return "yyyy-MM-dd HH:mm:ss"
         } else {
-            return Date(timeIntervalSince1970: dateTime).string(dateFormat: "yyyy-MM-dd HH:mm:ss")
+            return Date(timeIntervalSince1970: dateTime)
+                .string(dateFormat: "yyyy-MM-dd HH:mm:ss",
+                        timeZone: TimeZone(secondsFromGMT: timezone) ?? TimeZone.HongKongTimeZone())
         }
     }
 
     var displayDay: String {
         if dateTime.isNaN {
-            return "yyyy-MM-dd HH:mm:ss"
+            return "EEEE ⎯⎯⎯⎯⎯ MMM d HH:mm"
         } else {
-            return Date(timeIntervalSince1970: dateTime).string(dateFormat: "EEEE ⎯⎯⎯⎯⎯ MMM d")
+            return Date(timeIntervalSince1970: dateTime)
+                .string(dateFormat: "EEEE ⎯⎯⎯⎯⎯ MMM d HH:mm",
+                        timeZone: TimeZone(secondsFromGMT: timezone) ?? TimeZone.HongKongTimeZone())
         }
     }
 
@@ -37,7 +42,9 @@ struct EBWeatherReportModel {
         if dateTime.isNaN {
             return "HH:mm"
         } else {
-            return Date(timeIntervalSince1970: dateTime).string(dateFormat: "HH:mm")
+            return Date(timeIntervalSince1970: dateTime)
+                .string(dateFormat: "HH:mm",
+                        timeZone: TimeZone(secondsFromGMT: system.timezone) ?? TimeZone.HongKongTimeZone())
         }
     }
 
@@ -52,6 +59,8 @@ struct EBWeatherReportModel {
     init(cityID: String = "",
          cityName: String = "",
          dateTime: TimeInterval = .nan,
+         timezone: Int = 0,
+         system: EBSystemModel = EBSystemModel(),
          coordinate: EBCoordinateModel = EBCoordinateModel(),
          temperature: EBTemperatureModel = EBTemperatureModel(),
          wind: EBWindModel = EBWindModel(),
@@ -59,6 +68,8 @@ struct EBWeatherReportModel {
         self.cityID = cityID
         self.cityName = cityName
         self.dateTime = dateTime
+        self.timezone = timezone
+        self.system = system
         self.coordinate = coordinate
         self.temperature = temperature
         self.wind = wind
@@ -70,7 +81,7 @@ struct EBWeatherReportModel {
 
 extension EBWeatherReportModel {
     var isValid: Bool {
-        return !cityID.isEmpty
+        return !cityID.isEmpty && cityID != "0"
     }
 }
 
@@ -81,6 +92,13 @@ extension EBWeatherReportModel {
      "id": 1819729,
      "name": "Hong Kong",
      "dt": 1573651081,
+     "timezone": 28800,
+     "sys": {
+       "country": "HK",
+       "timezone": 28800,
+       "sunrise": 1573943798,
+       "sunset": 1573983600
+     },
      "coord": {
          "lat": 22.2793,
          "lon": 114.1628
@@ -109,6 +127,8 @@ extension EBWeatherReportModel: Codable {
         case cityID = "id"
         case cityName = "name"
         case dateTime = "dt"
+        case timezone
+        case system = "sys"
         case coordinate = "coord"
         case temperature = "main"
         case wind
@@ -132,12 +152,28 @@ extension EBWeatherReportModel: Codable {
             cityName = ""
         }
 
-        if let dateTimeTimeInterval = try? container.decode(TimeInterval.self, forKey: .dateTime) {
-            dateTime = dateTimeTimeInterval
-        } else if let dateTimeString = try? container.decode(String.self, forKey: .dateTime) {
-            dateTime = TimeInterval(dateTimeString) ?? .nan
+        if let valueTimeInterval = try? container.decode(TimeInterval.self, forKey: .dateTime) {
+            dateTime = valueTimeInterval
+        } else if let valueString = try? container.decode(String.self, forKey: .dateTime) {
+            dateTime = TimeInterval(valueString) ?? .nan
         } else {
             dateTime = .nan
+        }
+
+        if let valueInt = try? container.decode(Int.self, forKey: .timezone) {
+            timezone = valueInt
+        } else if let valueDouble = try? container.decode(Double.self, forKey: .timezone) {
+            timezone = Int(valueDouble)
+        } else if let valueString = try? container.decode(String.self, forKey: .timezone) {
+            timezone = Int(valueString) ?? 0
+        } else {
+            timezone = Int(NSNotFound)
+        }
+
+        do {
+            system = try container.decode(.system)
+        } catch {
+            system = EBSystemModel()
         }
 
         do {
@@ -167,7 +203,6 @@ extension EBWeatherReportModel: Codable {
 
     func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
-
         if !cityID.isEmpty {
             try container.encode(cityID, forKey: .cityID)
         }
@@ -176,6 +211,12 @@ extension EBWeatherReportModel: Codable {
         }
         if !dateTime.isNaN {
             try container.encode(dateTime.clean, forKey: .dateTime)
+        }
+        if timezone != NSNotFound {
+            try container.encode(timezone, forKey: .timezone)
+        }
+        if system.isValid {
+            try container.encode(system, forKey: .system)
         }
         if coordinate.isValid {
             try container.encode(coordinate, forKey: .coordinate)

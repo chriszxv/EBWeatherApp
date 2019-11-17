@@ -43,14 +43,19 @@ extension EBCoordinateModel: Codable {
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
 
-        do {
-            latitude = try container.decode(.latitude)
-        } catch {
+        if let valueDouble = try? container.decode(Double.self, forKey: .latitude) {
+            latitude = valueDouble
+        } else if let valueString = try? container.decode(String.self, forKey: .latitude) {
+            latitude = Double(valueString) ?? .nan
+        } else {
             latitude = .nan
         }
-        do {
-            longitude = try container.decode(.longitude)
-        } catch {
+        
+        if let valueDouble = try? container.decode(Double.self, forKey: .longitude) {
+            longitude = valueDouble
+        } else if let valueString = try? container.decode(String.self, forKey: .longitude) {
+            longitude = Double(valueString) ?? .nan
+        } else {
             longitude = .nan
         }
     }
