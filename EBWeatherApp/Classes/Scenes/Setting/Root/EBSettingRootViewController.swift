@@ -14,12 +14,14 @@ class EBSettingRootViewController: EBBaseViewController {
         return "EBSetting"
     }
 
+    @IBOutlet private var backgroundView: UIView!
     @IBOutlet private var closeButton: UIButton!
     @IBOutlet private var titleLabel: UILabel!
     @IBOutlet private var languageLabel: UILabel!
     @IBOutlet private var languageENButton: UIButton!
     @IBOutlet private var languageTCButton: UIButton!
     @IBOutlet private var languageSCButton: UIButton!
+    @IBOutlet private var themeStackView: UIStackView!
     @IBOutlet private var themeLabel: UILabel!
     @IBOutlet private var themeLightButton: UIButton!
     @IBOutlet private var themeDarkButton: UIButton!
@@ -35,29 +37,56 @@ class EBSettingRootViewController: EBBaseViewController {
         _setupBindings()
     }
 
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        if #available(iOS 13.0, *) {
+            if let hasUserInterfaceStyleChanged = previousTraitCollection?.hasDifferentColorAppearance(comparedTo: traitCollection),
+                hasUserInterfaceStyleChanged == true {
+                _setupUITheme()
+            }
+        }
+    }
+
     private func _setupUIs() {
-        // None
+        _setupUITheme()
+        view.backgroundColor = .clear
+        backgroundView.alpha = 0.95
+        if #available(iOS 13.0, *) {
+            themeStackView.isHidden = false
+        } else {
+            themeStackView.isHidden = true
+        }
+    }
+
+    private func _setupUITheme() {
+        backgroundView.backgroundColor = R.color.background.background()
+        closeButton.tintColor = R.color.background.primary()
+        titleLabel.textColor = R.color.text.primary()
+        languageENButton.setTitleColor(R.color.background.primary(), for: .normal)
+        languageTCButton.setTitleColor(R.color.background.primary(), for: .normal)
+        languageSCButton.setTitleColor(R.color.background.primary(), for: .normal)
+        languageLabel.textColor = R.color.text.primary()
+        themeLabel.textColor = R.color.text.primary()
+        themeLightButton.setTitleColor(R.color.background.primary(), for: .normal)
+        themeDarkButton.setTitleColor(R.color.background.primary(), for: .normal)
+        iconLabel.textColor = R.color.text.primary()
+        iconActionButton.setTitleColor(R.color.background.primary(), for: .normal)
     }
 
     private func _setupBindings() {
-        _bindThemeService()
         _bindLocaleService()
         _bindViewModel()
-    }
-
-    private func _bindThemeService() {
-        // None
     }
 
     private func _bindLocaleService() {
         Localize.languageDidChange
             .drive(onNext: { [unowned self] _ in
-                self.titleLabel.text = R.string.localizable.setting_title.key.localized
-                self.languageLabel.text = R.string.localizable.setting_title_language.key.localized
-                self.themeLabel.text = R.string.localizable.setting_title_theme.key.localized
-                self.themeLightButton.setTitle(R.string.localizable.setting_value_light.key.localized, for: .normal)
-                self.themeDarkButton.setTitle(R.string.localizable.setting_value_dark.key.localized, for: .normal)
-                self.iconLabel.text = R.string.localizable.setting_title_icon.key.localized
+                self.titleLabel.text = R.string.localizable.title_setting.key.localized
+                self.languageLabel.text = R.string.localizable.title_language.key.localized
+                self.themeLabel.text = R.string.localizable.title_theme.key.localized
+                self.themeLightButton.setTitle(R.string.localizable.value_theme_light.key.localized, for: .normal)
+                self.themeDarkButton.setTitle(R.string.localizable.value_theme_dark.key.localized, for: .normal)
+                self.iconLabel.text = R.string.localizable.title_icon.key.localized
             })
             .disposed(by: disposeBag)
     }
@@ -66,7 +95,6 @@ class EBSettingRootViewController: EBBaseViewController {
         assert(viewModel != nil)
 
         let triggerClose = closeButton.rx.tap.asDriver()
-
         let triggerLanguageEN = languageENButton.rx.tap.asDriver()
         let triggerLanguageTC = languageTCButton.rx.tap.asDriver()
         let triggerLanguageSC = languageSCButton.rx.tap.asDriver()
@@ -81,8 +109,7 @@ class EBSettingRootViewController: EBBaseViewController {
                                                  triggerThemeLight: triggerThemeLight,
                                                  triggerThemeDark: triggerThemeDark,
                                                  triggerWebIcon8: triggerWebIcon8)
-        let output = viewModel.transform(input)
+        _ = viewModel.transform(input)
 
-        print(output)
     }
 }

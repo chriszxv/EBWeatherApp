@@ -56,7 +56,40 @@ final class EBSettingRootViewModel: ViewModelType {
             .drive(onNext: Localize.setCurrentLanguage)
             .disposed(by: disposeBag)
 
+        input.triggerThemeLight
+            .drive(onNext: EBSettingRootViewModel._switchToLightTheme)
+            .disposed(by: disposeBag)
+
+        input.triggerThemeDark
+            .drive(onNext: EBSettingRootViewModel._switchToDarkTheme)
+            .disposed(by: disposeBag)
+
+        input.triggerWebIcon8
+            .map { URL(string: EBURLConstants.Icon8.Reference)! }
+            .drive(onNext: navigator.showExternal)
+            .disposed(by: disposeBag)
+
         // Output
         return Output()
+    }
+}
+
+// MARK: - Theme
+
+extension EBSettingRootViewModel {
+    private static func _switchToLightTheme() {
+        if #available(iOS 13.0, *) {
+            UIApplication.shared.windows.forEach { window in
+                window.overrideUserInterfaceStyle = .light
+            }
+        }
+    }
+
+    private static func _switchToDarkTheme() {
+        if #available(iOS 13.0, *) {
+            UIApplication.shared.windows.forEach { window in
+                window.overrideUserInterfaceStyle = .dark
+            }
+        }
     }
 }
