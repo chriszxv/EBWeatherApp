@@ -1,0 +1,52 @@
+PODS:
+  - R.swift (5.1.0):
+    - R.swift.Library (~> 5.1.0)
+  - R.swift.Library (5.1.0)
+  - RxAnimated (0.6.1):
+    - RxAnimated/Core (= 0.6.1)
+    - RxCocoa (~> 5.0)
+    - RxSwift (~> 5.0)
+  - RxAnimated/Core (0.6.1):
+    - RxCocoa (~> 5.0)
+    - RxSwift (~> 5.0)
+  - RxCocoa (5.0.1):
+    - RxRelay (~> 5)
+    - RxSwift (~> 5)
+  - RxRelay (5.0.1):
+    - RxSwift (~> 5)
+  - RxSwift (5.0.1)
+  - SnapKit (5.0.1)
+  - SVProgressHUD (2.2.5)
+
+DEPENDENCIES:
+  - R.swift (= 5.1.0)
+  - RxAnimated (= 0.6.1)
+  - RxCocoa (= 5.0.1)
+  - RxSwift (= 5.0.1)
+  - SnapKit (= 5.0.1)
+  - SVProgressHUD (= 2.2.5)
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - R.swift
+    - R.swift.Library
+    - RxAnimated
+    - RxCocoa
+    - RxRelay
+    - RxSwift
+    - SnapKit
+    - SVProgressHUD
+
+SPEC CHECKSUMS:
+  R.swift: 8cbc4fc69b740305b6a17c8a8ed968eb788962d9
+  R.swift.Library: fa85ce1e0d0b7e818cd9e080df910ba54d2776cc
+  RxAnimated: 0c7f4c2898c06aa069507813aa50a4d01cb52bce
+  RxCocoa: e741b9749968e8a143e2b787f1dfbff2b63d0a5c
+  RxRelay: 89d54507f4fd4d969e6ec1d4bd7f3673640b4640
+  RxSwift: e2dc62b366a3adf6a0be44ba9f405efd4c94e0c4
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+
+PODFILE CHECKSUM: 51105fa5a91157727d4eadb69f182fc5d44c395b
+
+COCOAPODS: 1.8.4
