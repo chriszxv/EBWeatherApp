@@ -60,9 +60,10 @@ class EBWeatherDetailViewController: EBBaseViewController {
     }
 
     private func _setupUITheme() {
+        topGradentView.isUserInteractionEnabled = false
         topGradentView.colors = [R.color.background.background() ?? .clear,
                                  R.color.background.background()?.withAlphaComponent(0.0) ?? .clear]
-
+        bottomGradentView.isUserInteractionEnabled = false
         bottomGradentView.colors = [R.color.background.background()?.withAlphaComponent(0.0) ?? .clear,
                                     R.color.background.background() ?? .clear]
     }

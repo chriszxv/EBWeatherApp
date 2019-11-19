@@ -58,9 +58,10 @@ class EBWeatherListViewController: EBBaseViewController {
     private func _setupUITheme() {
         settingButton.tintColor = R.color.background.primary()
         tableView.backgroundColor = .clear
+        topGradentView.isUserInteractionEnabled = false
         topGradentView.colors = [R.color.background.background() ?? .clear,
                                  R.color.background.background()?.withAlphaComponent(0.0) ?? .clear]
-
+        bottomGradentView.isUserInteractionEnabled = false
         bottomGradentView.colors = [R.color.background.background()?.withAlphaComponent(0.0) ?? .clear,
                                     R.color.background.background() ?? .clear]
     }
